@@ -54,7 +54,8 @@ constructor(props) {
               <li > <b>Alert Submitted By:</b>{item.alertSubmittedBy}</li>
               <li > <b>City:</b>{item.yourCity}</li>
                <li ><b>Address:</b>{item.yourAddress}</li>
-              <li > <b>Description about the product:</b>{item.description}</li>
+               <li ><b>Image Path:</b><a href="item.productImage">{item.productImage} </a></li>
+              <li > <b>Description:</b>{item.description}</li>
            </ul>
           
           ))}

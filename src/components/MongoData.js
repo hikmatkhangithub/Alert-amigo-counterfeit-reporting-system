@@ -58,6 +58,7 @@ constructor(props) {
               <li > {item.alertSubmittedBy}</li>
               <li > {item.yourCity}</li>
                <li >{item.yourAddress}</li>
+               <li >{item.productImage}</li>
               <li > {item.description}</li>
            </ul>
           ))}
