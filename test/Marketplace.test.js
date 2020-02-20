@@ -35,9 +35,9 @@ contract('Marketplace', ([deployer, seller, buyer]) => {
      // console.log(result+"result of the first function")
       productCount = await marketplace.productCount()
      // console.log(productCount+"this is the product count" )
-      result1 = await marketplace.createProduct1('', '', '', '', '', '', { from: seller })
+     // result1 = await marketplace.createProduct1('', '', '', '', '', '', { from: seller })
 
-      productCount1 = await marketplace.productCount1()
+     // productCount1 = await marketplace.productCount1()
      // console.log(result1+"result of the second fucntion")
      // console.log(productCount1+"this is the product count 2")
     })
@@ -56,7 +56,7 @@ contract('Marketplace', ([deployer, seller, buyer]) => {
       assert.equal(event.owner, seller, 'owner is correct')
       assert.equal(event.purchased, false, 'purchased is correct')
       console.log(event)
-      const event1 = result1.logs[0].args
+     /* const event1 = result1.logs[0].args
       console.log(event1)
       assert.equal(event1.pRiskType, '', 'no risk correct')
       assert.equal(event1.pAlertSubmittedBy, '', 'no alert is correct')
@@ -64,7 +64,7 @@ contract('Marketplace', ([deployer, seller, buyer]) => {
       assert.equal(event1.pYourAddress, '', 'no alert is correct')
       assert.equal(event1.pUploadFile, '', 'no alert is correct')
       assert.equal(event1.pDescription, '', 'no alert is correct')
-
+*/
 
 
       // FAILURE: Product must have a name
@@ -75,7 +75,7 @@ contract('Marketplace', ([deployer, seller, buyer]) => {
 
     it('lists products', async () => {
       const product = await marketplace.products(productCount)
-      const product1 = await marketplace.productss(productCount1)
+      //const product1 = await marketplace.productss(productCount1)
 
       assert.equal(product.id.toNumber(), productCount.toNumber(), 'id is correct')
       assert.equal(product.pname, 'iPhone X', 'name is correct')
@@ -88,10 +88,10 @@ contract('Marketplace', ([deployer, seller, buyer]) => {
       assert.equal(product.owner, seller, 'owner is correct')
       assert.equal(product.purchased, false, 'purchased is correct')
 
-      assert.equal(product1.pRiskType, '', 'no risk correct')
+     /* assert.equal(product1.pRiskType, '', 'no risk correct')
       assert.equal(product1.pAlertSubmittedBy, '', 'no alert is correct')
       assert.equal(product1.pUploadFile, '', 'no alert is correct')
-      assert.equal(product1.pDescription, '', 'no alert is correct')
+      assert.equal(product1.pDescription, '', 'no alert is correct')*/
 
 
 

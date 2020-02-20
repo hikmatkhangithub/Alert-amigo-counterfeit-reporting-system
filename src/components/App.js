@@ -19,6 +19,7 @@ class App extends Component {
     }
     else if (window.web3) {
       window.web3 = new Web3(window.web3.currentProvider)
+
     }
     else {
       window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
@@ -54,6 +55,8 @@ class App extends Component {
       //---------------------------------added code end-------------------------
       this.setState({ loading: false})
     } else {
+      console.log(window.web3.currentProvider)
+
       window.alert('Marketplace contract not deployed to detected network.')
     }
   }

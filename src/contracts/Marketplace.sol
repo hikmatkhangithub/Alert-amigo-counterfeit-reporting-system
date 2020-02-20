@@ -3,9 +3,9 @@ pragma solidity ^0.5.0;
 contract Marketplace {
     string public name;
     uint public productCount = 0;
-    uint public productCount1 = 0;
     mapping(uint256 => Product) public products;
-    mapping(uint256 => Product1) public productss;
+  
+    
 
     struct Product {
         uint id;
