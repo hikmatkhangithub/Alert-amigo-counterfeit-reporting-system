@@ -1,206 +1,12 @@
 import React, { Component } from "react";
 import Web3 from "web3";
 import Marketplace from "../abis/Marketplace.json";
-import Navbar from "./Navbar";
 import Main from "./Main";
+import HDWalletProvider from "@truffle/hdwallet-provider";
 
 //const Web3 = require("web3");
-
-const web3 = new Web3(
-  "https://ropsten.infura.io/v3/6177a5ebb0324e17b63f43f299050c8c"
-);
-
-const abi = [
-  [
-    {
-      constant: false,
-      inputs: [
-        {
-          internalType: "string",
-          name: "_pname",
-          type: "string"
-        },
-        {
-          internalType: "uint256",
-          name: "_price",
-          type: "uint256"
-        },
-        {
-          internalType: "string",
-          name: "_pCategory",
-          type: "string"
-        },
-        {
-          internalType: "string",
-          name: "_pBrand",
-          type: "string"
-        },
-        {
-          internalType: "string",
-          name: "_pCountryOfOrigin",
-          type: "string"
-        }
-      ],
-      name: "createProduct",
-      outputs: [],
-      payable: false,
-      stateMutability: "nonpayable",
-      type: "function"
-    },
-    {
-      inputs: [],
-      payable: false,
-      stateMutability: "nonpayable",
-      type: "constructor"
-    },
-    {
-      anonymous: false,
-      inputs: [
-        {
-          indexed: false,
-          internalType: "uint256",
-          name: "id",
-          type: "uint256"
-        },
-        {
-          indexed: false,
-          internalType: "string",
-          name: "pname",
-          type: "string"
-        },
-        {
-          indexed: false,
-          internalType: "uint256",
-          name: "price",
-          type: "uint256"
-        },
-        {
-          indexed: false,
-          internalType: "string",
-          name: "pCategory",
-          type: "string"
-        },
-        {
-          indexed: false,
-          internalType: "string",
-          name: "pBrand",
-          type: "string"
-        },
-        {
-          indexed: false,
-          internalType: "string",
-          name: "pCountryOfOrigin",
-          type: "string"
-        },
-        {
-          indexed: false,
-          internalType: "address payable",
-          name: "owner",
-          type: "address"
-        },
-        {
-          indexed: false,
-          internalType: "bool",
-          name: "purchased",
-          type: "bool"
-        }
-      ],
-      name: "ProductCreated",
-      type: "event"
-    },
-    {
-      constant: true,
-      inputs: [],
-      name: "name",
-      outputs: [
-        {
-          internalType: "string",
-          name: "",
-          type: "string"
-        }
-      ],
-      payable: false,
-      stateMutability: "view",
-      type: "function"
-    },
-    {
-      constant: true,
-      inputs: [],
-      name: "productCount",
-      outputs: [
-        {
-          internalType: "uint256",
-          name: "",
-          type: "uint256"
-        }
-      ],
-      payable: false,
-      stateMutability: "view",
-      type: "function"
-    },
-    {
-      constant: true,
-      inputs: [
-        {
-          internalType: "uint256",
-          name: "",
-          type: "uint256"
-        }
-      ],
-      name: "products",
-      outputs: [
-        {
-          internalType: "uint256",
-          name: "id",
-          type: "uint256"
-        },
-        {
-          internalType: "string",
-          name: "pname",
-          type: "string"
-        },
-        {
-          internalType: "uint256",
-          name: "price",
-          type: "uint256"
-        },
-        {
-          internalType: "string",
-          name: "pCategory",
-          type: "string"
-        },
-        {
-          internalType: "string",
-          name: "pBrand",
-          type: "string"
-        },
-        {
-          internalType: "string",
-          name: "pCountryOfOrigin",
-          type: "string"
-        },
-        {
-          internalType: "address payable",
-          name: "owner",
-          type: "address"
-        },
-        {
-          internalType: "bool",
-          name: "purchased",
-          type: "bool"
-        }
-      ],
-      payable: false,
-      stateMutability: "view",
-      type: "function"
-    }
-  ]
-];
-const address = "0xe7802bA29006e3C12A6b2b2F4CDCF70b6FB5a686";
-
-const contract = new web3.eth.Contract(abi, address);
-
-console.log(contract);
+const mnemonic =
+  "seek toe pistol tell lyrics ride scare skate more cabin acid enforce";
 
 class App extends Component {
   async componentWillMount() {
@@ -224,7 +30,11 @@ class App extends Component {
   }
 
   async loadBlockchainData() {
-    const web3 = window.web3;
+    /* const provider = new HDWalletProvider(
+      mnemonic,
+      `https://ropsten.infura.io/v3/6177a5ebb0324e17b63f43f299050c8c`
+    ); */
+    const web3 = new Web3(window.web3);
     // Load account
     const accounts = await web3.eth.getAccounts();
     this.setState({ account: accounts[0] });

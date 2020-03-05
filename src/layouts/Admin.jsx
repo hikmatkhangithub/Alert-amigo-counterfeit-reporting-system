@@ -22,16 +22,10 @@ import AdminNavbar from "components/Navbars/AdminNavbar";
 //import Footer from "components/Footer/Footer";
 import Sidebar from "components/Sidebar/Sidebar";
 import "./Admin.css";
-import SignInForm from "components/SignInForm/SignInForm.jsx";
-import SignUpForm from "components/SignUpForm/SignUpForm.jsx";
+/* import SignInForm from "components/SignInForm/SignInForm.jsx";
+import SignUpForm from "components/SignUpForm/SignUpForm.jsx"; */
 
-import {
-  HashRouter as Router,
-  Switch,
-  Route,
-  Link,
-  NavLink
-} from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 import { style } from "variables/Variables.jsx";
 

@@ -13,9 +13,9 @@ import "./Abc.css";
 import AdminLayout from "layouts/Admin.jsx";
 import AdminDashboard from "views/AdminDashboard";
 
-import App from "./components/App";
+//import App from "./components/App";
 import Blockchain from "./components/Blockchain";
-import MongoData from "./components/MongoData";
+
 import Notfound from "./components/notfound";
 import * as serviceWorker from "./serviceWorker";
 
@@ -36,9 +36,9 @@ const Routing = (
           </div>
         </div>
       </Link>
-      <Route exact path="/admin/App" component={App} />
+      {/*  <Route exact path="/admin/App" component={App} /> */}
       <Route path="/admin/Blockchain" component={Blockchain} />
-      <Route path="/admin/MongoData" component={MongoData} />
+
       <Route path="/admin/AdminDashboard" component={AdminDashboard} />
       <Route component={Notfound} />
     </Switch>

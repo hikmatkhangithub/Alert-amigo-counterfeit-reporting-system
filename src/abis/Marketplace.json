@@ -3348,6 +3348,130 @@
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {
+    "3": {
+      "events": {
+        "0xfbe6e8a592625d354660171820131329453f02c0351f8cd2b57b5daa668dc1b3": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "pname",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "pCategory",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "pBrand",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "pCountryOfOrigin",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "bool",
+              "name": "purchased",
+              "type": "bool"
+            }
+          ],
+          "name": "ProductCreated",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x3532f5559775D9B1961c2972a2FE668a42162ce6",
+      "transactionHash": "0x94007572fb11e3d1cdce4bf96113d8eef98f1f061570d394c2dc25587ad91a1f"
+    },
+    "4": {
+      "events": {
+        "0xfbe6e8a592625d354660171820131329453f02c0351f8cd2b57b5daa668dc1b3": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "pname",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "pCategory",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "pBrand",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "pCountryOfOrigin",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "bool",
+              "name": "purchased",
+              "type": "bool"
+            }
+          ],
+          "name": "ProductCreated",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x9BcE6A89A26397cB4753B70E7dcd404FF924b65A",
+      "transactionHash": "0xdf2d059a8791ad0d57503e54d59b7724543053ebae5c5979caab43da797d77c8"
+    },
     "5777": {
       "events": {
         "0xfbe6e8a592625d354660171820131329453f02c0351f8cd2b57b5daa668dc1b3": {
@@ -3412,7 +3536,8 @@
     }
   },
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-03-04T20:51:33.814Z",
+  "updatedAt": "2020-03-05T20:36:45.520Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },
