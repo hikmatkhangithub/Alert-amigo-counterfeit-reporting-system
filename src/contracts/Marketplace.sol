@@ -4,8 +4,6 @@ contract Marketplace {
     string public name;
     uint public productCount = 0;
     mapping(uint256 => Product) public products;
-  
-    
 
     struct Product {
         uint id;
@@ -18,7 +16,6 @@ contract Marketplace {
         bool purchased;
         
     }
-
 
     event ProductCreated(
         uint id,

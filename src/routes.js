@@ -21,8 +21,10 @@ import UserProfile from "views/UserProfile.jsx";
 import Typography from "views/Typography.jsx";
 import Icons from "views/Icons.jsx";
 import Maps from "views/Maps.jsx";
+import AdminDashboard from "views/AdminDashboard";
 import Notifications from "views/Notifications.jsx";
 import Upgrade from "views/Upgrade.jsx";
+import AdminDashboar from "views/AdminDashboard";
 
 const dashboardRoutes = [
   {
@@ -32,14 +34,14 @@ const dashboardRoutes = [
     component: Notifications,
     layout: "/admin"
   },
-  // {
-  //   path: "/dashboard",
-  //   name: "Sign In/Sign Up",
-  //   icon: "pe-7s-user",
-  //   component: Dashboard,
-  //   layout: "/admin"
-  // },
-  
+  /*  {
+    path: "/dashboard",
+    name: "Sign In/Sign Up",
+    icon: "pe-7s-user",
+    component: Dashboard,
+    layout: "/admin"
+  }, */
+
   {
     path: "/user",
     name: "Search",
@@ -75,8 +77,14 @@ const dashboardRoutes = [
     icon: "pe-7s-bell",
     component: Maps,
     layout: "/admin"
-  },
-
+  }
+  /*   {
+    path: "/admindashboard",
+    name: "All Alerts",
+    icon: "pe-7s-bell",
+    component: AdminDashboard,
+    layout: "/admin"
+  } */
 ];
 
 export default dashboardRoutes;

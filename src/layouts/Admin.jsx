@@ -19,20 +19,23 @@ import React, { Component } from "react";
 import NotificationSystem from "react-notification-system";
 
 import AdminNavbar from "components/Navbars/AdminNavbar";
-// import Footer from "components/Footer/Footer";
+//import Footer from "components/Footer/Footer";
 import Sidebar from "components/Sidebar/Sidebar";
-import './Admin.css';
+import "./Admin.css";
 import SignInForm from "components/SignInForm/SignInForm.jsx";
 import SignUpForm from "components/SignUpForm/SignUpForm.jsx";
 
-import { HashRouter as Router, Switch, Route, Link, NavLink } from 'react-router-dom';
-
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink
+} from "react-router-dom";
 
 import { style } from "variables/Variables.jsx";
 
 import routes from "routes.js";
-
-
 
 class Admin extends Component {
   constructor(props) {
@@ -147,7 +150,6 @@ class Admin extends Component {
       default:
         break;
     }
-
   }
   componentDidUpdate(e) {
     if (
@@ -165,33 +167,20 @@ class Admin extends Component {
   }
   render() {
     return (
-
-
       <div className="wrapper">
-      <NotificationSystem ref="notificationSystem" style={style} />
-      <Sidebar {...this.props} routes={routes}
-      color={this.state.color}
-     />
-      <div id="main-panel" className="main-panel" ref="mainPanel">
-        <div class="header">
-        <AdminNavbar
-          {...this.props}
-          brandText={this.getBrandText(this.props.location.pathname)}
-        />
-         </div>
-        <Switch>{this.getRoutes(routes)}</Switch>
-        {/* <Footer /> */}
-       
+        <NotificationSystem ref="notificationSystem" style={style} />
+        <Sidebar {...this.props} routes={routes} color={this.state.color} />
+        <div id="main-panel" className="main-panel" ref="mainPanel">
+          <div className="header">
+            <AdminNavbar
+              {...this.props}
+              brandText={this.getBrandText(this.props.location.pathname)}
+            />
+          </div>
+          <Switch>{this.getRoutes(routes)}</Switch>
+          {/* <Footer /> */}
+        </div>
       </div>
-    </div>
-
-
-
-
-
-
-
-
     );
   }
 }
