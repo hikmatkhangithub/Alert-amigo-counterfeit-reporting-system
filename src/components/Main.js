@@ -84,26 +84,20 @@ class Main extends Component {
 
     console.log("Clicked");
     //---------------------------------------------------
-    const pname = this.productName.value;
+    /* const pname = this.productName.value;
     const price = this.productPrice.value;
     const pCategory = this.productCategory.value;
     const pBrand = this.productBrand.value;
     const pCountryOfOrigin = this.state.countryOfOrigin;
 
-    this.props.createProduct(pname, price, pCategory, pBrand, pCountryOfOrigin);
-
-    console.log(pname);
-    console.log(price);
-    console.log(pCategory);
-    console.log(pBrand);
-    console.log(pCountryOfOrigin);
+    this.props.createProduct(pname, price, pCategory, pBrand, pCountryOfOrigin); */
   };
   render() {
     return (
       <div id="content">
-        <div class="container1">
-          <h2 class="abc">Submit Report</h2>
-          <hr class="new1" />
+        <div className="container1">
+          <h2 className="abc">Submit Report</h2>
+          <hr className="new1" />
           <form
             onSubmit={this.handleSubmit}
             id="myForm"
@@ -269,7 +263,7 @@ class Main extends Component {
               />
             </div>
             <br />
-            <button type="submit" class="popup-button">
+            <button type="submit" className="popup-button">
               Add Product
             </button>
             <br />
@@ -278,13 +272,13 @@ class Main extends Component {
 
           <div>
             {this.state.showMessage && (
-              <div class="alert alert-success">
+              <div className="alert alert-success">
                 <strong>Success!</strong> successful submitted a report
               </div>
             )}
           </div>
 
-          <h2>Submitted report</h2>
+          {/*       <h2>Submitted report</h2>
 
           <div id="productList">
             <table className="table">
@@ -315,7 +309,7 @@ class Main extends Component {
                 })}
               </tbody>
             </table>
-          </div>
+          </div> */}
         </div>
       </div>
     );

@@ -21,27 +21,29 @@ import * as serviceWorker from "./serviceWorker";
 
 const Routing = (
   <BrowserRouter>
-    <Switch>
-      <Route path="/admin" render={props => <AdminLayout {...props} />} />
-      {/* <Redirect from="/" to="/admin/dashboard" /> */}
-      {/* <BasicExample/> */}
-      <Link to="/admin/notifications">
-        <div class="container">
-          <div class="container22">
-            <h2 class="front">Entrance to Alert Amigo!</h2>
-            <button type="button" class="demo-button">
-              {" "}
-              DEMO
-            </button>
+    <React.Fragment>
+      <Switch>
+        <Route path="/admin" render={props => <AdminLayout {...props} />} />
+        {/* <Redirect from="/" to="/admin/dashboard" /> */}
+        {/* <BasicExample/> */}
+        <Link to="/admin/notifications">
+          <div className="container">
+            <div className="container22">
+              <h2 className="front">Entrance to Alert Amigo!</h2>
+              <button type="button" className="demo-button">
+                {" "}
+                DEMO
+              </button>
+            </div>
           </div>
-        </div>
-      </Link>
-      {/*  <Route exact path="/admin/App" component={App} /> */}
-      <Route path="/admin/Blockchain" component={Blockchain} />
+        </Link>
+        {/*  <Route exact path="/admin/App" component={App} /> */}
+        <Route path="/admin/Blockchain" component={Blockchain} />
 
-      <Route path="/admin/AdminDashboard" component={AdminDashboard} />
-      <Route component={Notfound} />
-    </Switch>
+        <Route path="/admin/AdminDashboard" component={AdminDashboard} />
+        <Route component={Notfound} />
+      </Switch>
+    </React.Fragment>
   </BrowserRouter>
 );
 

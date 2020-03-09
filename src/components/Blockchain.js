@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-/* import Main from "./Main";
-import App from "./App";
-import axios from "axios"; */
+
+import Logo from "views/tick.png";
 
 class Blockchain extends Component {
-  
   render() {
     return (
       <div id="content">
@@ -21,6 +19,7 @@ class Blockchain extends Component {
                 <th scope="col">Brand</th>
                 <th scope="col">Country of origin</th>
                 <th scope="col">Owner</th>
+                <th scope="col">Status</th>
               </tr>
             </thead>
             <tbody id="productList">
@@ -34,6 +33,9 @@ class Blockchain extends Component {
                     <td> {product.pBrand}</td>
                     <td> {product.pCountryOfOrigin}</td>
                     <td> {product.owner}</td>
+                    <td scope="col">
+                      <img width="25px" src={Logo}></img>
+                    </td>
                   </tr>
                 );
               })}

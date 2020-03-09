@@ -40,6 +40,12 @@ class Icons extends Component {
     // Load account
     const accounts = await web3.eth.getAccounts();
     this.setState({ account: accounts[0] });
+
+    /* -------------TxHash key------------------ */
+    /*     const txHash = await web3.eth.getTransactions();
+    this.setState({ Hash: txHash[0] });
+    console.log(this.state.Hash); */
+    /* --------------------------------------------- */
     const networkId = await web3.eth.net.getId();
     const networkData = Marketplace.networks[networkId];
     if (networkData) {
@@ -49,22 +55,19 @@ class Icons extends Component {
       );
       this.setState({ marketplace });
       const productCount = await marketplace.methods.productCount().call();
-      //console.log(productCount.toString())
+      /* const txHash = await marketplace.eth.getTransaction();
+
+      console.log(txHash); */
       this.setState({ productCount });
-      // Load products
+
       for (var i = 1; i <= productCount; i++) {
         const product = await marketplace.methods.products(i).call();
-        // const product1 = await marketplace.methods.productss(i).call()
-
         this.setState({
           products: [...this.state.products, product]
-          //  productss: [...this.state.productss, product1]
         });
         console.log(product);
-        // console.log(product1)
       }
-      //---------------------------------added code-----------------------------
-      //---------------------------------added code end-------------------------
+
       this.setState({ loading: false });
     } else {
       window.alert("Marketplace contract not deployed to detected network.");
@@ -75,9 +78,9 @@ class Icons extends Component {
     super(props);
     this.state = {
       account: "",
+      Hash: "",
       productCount: 0,
       products: [],
-      productss: [],
       loading: true
     };
   }
@@ -111,7 +114,7 @@ class Icons extends Component {
                       >
                         <button
                           type="submit"
-                          class="popup-status-button"
+                          className="popup-status-button"
                           onClick={this.setRedirect}
                         >
                           Alert Status

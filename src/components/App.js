@@ -4,10 +4,6 @@ import Marketplace from "../abis/Marketplace.json";
 import Main from "./Main";
 import HDWalletProvider from "@truffle/hdwallet-provider";
 
-//const Web3 = require("web3");
-const mnemonic =
-  "seek toe pistol tell lyrics ride scare skate more cabin acid enforce";
-
 class App extends Component {
   async componentWillMount() {
     await this.loadWeb3();
@@ -30,10 +26,6 @@ class App extends Component {
   }
 
   async loadBlockchainData() {
-    /* const provider = new HDWalletProvider(
-      mnemonic,
-      `https://ropsten.infura.io/v3/6177a5ebb0324e17b63f43f299050c8c`
-    ); */
     const web3 = new Web3(window.web3);
     // Load account
     const accounts = await web3.eth.getAccounts();
@@ -79,12 +71,10 @@ class App extends Component {
       loading: true
     };
 
-    this.createProduct = this.createProduct.bind(this);
-    //  this.createProduct1 = this.createProduct1.bind(this)
-    /* this.purchaseProduct = this.purchaseProduct.bind(this)*/
+    // this.createProduct = this.createProduct.bind(this);
   }
 
-  createProduct(pname, price, pCategory, pBrand, pCountryOfOrigin) {
+  /* createProduct(pname, price, pCategory, pBrand, pCountryOfOrigin) {
     this.setState({ loading: true });
     this.state.marketplace.methods
       .createProduct(pname, price, pCategory, pBrand, pCountryOfOrigin)
@@ -93,7 +83,7 @@ class App extends Component {
         this.setState({ loading: false });
       });
   }
-
+ */
   render() {
     return (
       <div>
@@ -107,10 +97,7 @@ class App extends Component {
               ) : (
                 <Main
                   products={this.state.products}
-                  productss={this.state.productss}
                   createProduct={this.createProduct}
-                  // createProduct1={this.createProduct1}
-                  //purchaseProduct={this.purchaseProduct}
                 />
               )}
             </main>
