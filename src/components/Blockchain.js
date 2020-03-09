@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { BrowserRouter, Route, Switch, Redirect, Link } from "react-router-dom";
 import Logo from "views/tick.png";
 
 class Blockchain extends Component {
@@ -33,7 +33,15 @@ class Blockchain extends Component {
                     <td> {product.pCategory} </td>
                     <td> {product.pBrand}</td>
                     <td> {product.pCountryOfOrigin}</td>
-                    <td> {product.txHash}</td>
+                    <td>
+                      {" "}
+                      <a
+                        href={`https://etherscan.io/block/${product.txHash}`}
+                        target="_blank"
+                      >
+                        {product.txHash}
+                      </a>{" "}
+                    </td>
                     <td> {product.owner}</td>
                     <td scope="col">
                       <img width="25px" src={Logo}></img>

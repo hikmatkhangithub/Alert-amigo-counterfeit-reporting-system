@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Badge } from "reactstrap";
 import Web3 from "web3";
 import Marketplace from "../abis/Marketplace.json";
-import { isConditionalExpression } from "typescript";
+
 import Logo from "./tick.png";
 
 class AdminDashboard extends Component {
