@@ -18,6 +18,7 @@ class Blockchain extends Component {
                 <th scope="col">Category</th>
                 <th scope="col">Brand</th>
                 <th scope="col">Country of origin</th>
+                <th scope="col">Block Number</th>
                 <th scope="col">Owner</th>
                 <th scope="col">Status</th>
               </tr>
@@ -32,6 +33,7 @@ class Blockchain extends Component {
                     <td> {product.pCategory} </td>
                     <td> {product.pBrand}</td>
                     <td> {product.pCountryOfOrigin}</td>
+                    <td> {product.txHash}</td>
                     <td> {product.owner}</td>
                     <td scope="col">
                       <img width="25px" src={Logo}></img>

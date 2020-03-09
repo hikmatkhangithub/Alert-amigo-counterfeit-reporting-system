@@ -130,13 +130,13 @@ class AdminDashboard extends Component {
     const pCountryOfOrigin = data.countryOfOrigin;
 
     /*  console.log("e", event.target.value); */
+
+    this.createProduct(pname, price, pCategory, pBrand, pCountryOfOrigin);
+
     this.setState({ isClicked: !this.state.showMessage });
     this.setState({ valueSet: event.target.value });
-
     console.log("Is clicked", this.state.isClicked);
     console.log("Is clicked for value", this.state.valueSet);
-
-    // this.createProduct(pname, price, pCategory, pBrand, pCountryOfOrigin);
   };
 
   handleDelete = id => {
