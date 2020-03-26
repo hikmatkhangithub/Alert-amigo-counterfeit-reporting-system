@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-
+import { fire, facebookProvider } from 'components/Config/Fire';
 class MongoData extends React.Component {
 constructor(props) {
     super(props);
     this.state = {
+        user: {},
       error: null,
       isLoaded: false,
       products: []
     };
+    this.authListener = this.authListener.bind(this);
   }
   componentDidMount() {
+    this.authListener();
     fetch("https://alert-amigo-api.herokuapp.com/products")
       .then(res => res.json())
       .then(
@@ -31,6 +34,18 @@ constructor(props) {
       )
       console.log(this.state.products[0]);
   }
+  authListener() {
+    fire.auth().onAuthStateChanged((user) => {
+      console.log(user);
+      if (user) {
+        this.setState({ user });
+        localStorage.setItem('user', user.uid);
+      } else {
+        this.setState({ user: null });
+        localStorage.removeItem('user');
+      }
+    });
+  }
   render() {
     const { error, isLoaded, products } = this.state;
     if (error) {
@@ -39,7 +54,7 @@ constructor(props) {
       return <div>Loading...</div>;
     } else {
       return (
-        <div className="container1">
+        <div className="container1 content-margin">
 
           {products.map(item => (
             <div class="content">

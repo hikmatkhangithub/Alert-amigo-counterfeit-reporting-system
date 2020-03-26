@@ -840,3 +840,11 @@
 	width:50%;
 	margin:20px;
 }
+.FormTitle1{
+	color:#333;
+	position: relative;
+	left:210px;
+	top:20px;
+	font-size:x-large;
+	margin-bottom:50px;
+}

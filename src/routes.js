@@ -23,7 +23,8 @@ import Icons from "views/Icons.jsx";
 import Maps from "views/Maps.jsx";
 import Notifications from "views/Notifications.jsx";
 import Upgrade from "views/Upgrade.jsx";
-
+import SignUpForm from "components/SignUpForm/SignUpForm.jsx";
+import Logout from "components/Logout/Logout.jsx";
 const dashboardRoutes = [
   {
     path: "/notifications",
@@ -33,13 +34,13 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   // {
-  //   path: "/dashboard",
-  //   name: "Sign In/Sign Up",
+  //   path: "/signup",
+  //   name: "SignUp Form",
   //   icon: "pe-7s-user",
-  //   component: Dashboard,
+  //   component: SignUpForm,
   //   layout: "/admin"
   // },
-  
+
   {
     path: "/user",
     name: "Search",
@@ -74,6 +75,13 @@ const dashboardRoutes = [
     name: "All Alerts",
     icon: "pe-7s-bell",
     component: Maps,
+    layout: "/admin"
+  },
+  {
+    path: "/logout",
+    name: "Log out",
+    icon: "pe-7s-user",
+    component: Logout,
     layout: "/admin"
   },
 

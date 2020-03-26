@@ -60,7 +60,6 @@ constructor(props) {
                                  <p style={{color:"#333"}}><b>City:</b>{item.yourCity}</p>
                                  <p style={{color:"#333"}}><b>Address:</b>{item.yourAddress}</p>
                                  <p style={{color:"#333"}}><b>Description about the product:</b>{item.description}</p>
-                                 <p style={{color:"#333"}}><b>Product Image:</b><img  src={{ pathname: `/uploads/${item.productImage}` }} /></p>
                               </div>
                             </div>
                           </div>

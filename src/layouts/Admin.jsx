@@ -26,25 +26,26 @@ import SignInForm from "components/SignInForm/SignInForm.jsx";
 import SignUpForm from "components/SignUpForm/SignUpForm.jsx";
 
 import { HashRouter as Router, Switch, Route, Link, NavLink } from 'react-router-dom';
-
+import Dashboard from "views/Dashboard.jsx";
 
 import { style } from "variables/Variables.jsx";
 
 import routes from "routes.js";
-
+import Notifications from "views/Notifications.jsx";
 
 
 class Admin extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+  constructor() {
+    super();
+    this.state = ({
       _notificationSystem: null,
 
       color: "purple",
       //  gradient
 
-      fixedClasses: "dropdown show-dropdown open"
-    };
+      fixedClasses: "dropdown show-dropdown open",
+    });
+
   }
   handleNotificationClick = position => {
     var color = Math.floor(Math.random() * 4 + 1);
@@ -127,6 +128,7 @@ class Admin extends Component {
     }
   };
   componentDidMount() {
+  
     this.setState({ _notificationSystem: this.refs.notificationSystem });
     var _notificationSystem = this.refs.notificationSystem;
     var color = Math.floor(Math.random() * 4 + 1);
@@ -163,6 +165,7 @@ class Admin extends Component {
       this.refs.mainPanel.scrollTop = 0;
     }
   }
+
   render() {
     return (
 
@@ -179,6 +182,7 @@ class Admin extends Component {
           brandText={this.getBrandText(this.props.location.pathname)}
         />
          </div>
+
         <Switch>{this.getRoutes(routes)}</Switch>
         {/* <Footer /> */}
 

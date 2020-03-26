@@ -25,12 +25,24 @@ import './Typography.css';
 import search from './search.png';
 import report from './report.png';
 import alertsbell from './alertsbell.png';
+import { fire, facebookProvider } from 'components/Config/Fire';
 class Notifications extends Component {
+  constructor(props) {
+      super(props);
+      this.logout = this.logout.bind(this);
+  }
+
+
+  logout() {
+      fire.auth().signOut();
+  }
+
   render() {
     return (
       <section class="wrapper">
     <div class="container-fostrap">
         <div>
+
             <h1 class="welcome">
                 Welcome to Alert Amigo
             </h1>
