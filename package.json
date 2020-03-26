@@ -5,11 +5,8 @@
   "description": "A Rapid alert System on Ethereum blockchain",
   "author": "hikmatkhanse@gmail.com",
   "dependencies": {
-<<<<<<< HEAD
     "@blueprintjs/core": "^3.24.0",
-=======
     "@truffle/hdwallet-provider": "^1.0.32",
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
     "axios": "^0.19.2",
     "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.7.0",
@@ -22,24 +19,18 @@
     "chai-as-promised": "7.1.1",
     "chai-bignumber": "3.0.0",
     "chartist": "0.10.1",
-<<<<<<< HEAD
     "dotenv": "^8.2.0",
     "firebase": "^7.11.0",
-=======
     "darq-truffle": "^4.1.9-latest.0",
     "node-gyp": "^6.1.0",
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
     "node-sass": "4.12.0",
     "npm-git-install": "^0.3.0",
     "react": "^16.12.0",
     "react-bootstrap": "0.32.4",
     "react-chartist": "0.13.3",
     "react-dom": "^16.12.0",
-<<<<<<< HEAD
     "react-filter-search": "^1.0.11",
     "react-google-login": "^5.1.1",
-=======
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
     "react-google-maps": "9.4.5",
     "react-notification-system": "0.2.17",
     "react-router": "5.0.0",

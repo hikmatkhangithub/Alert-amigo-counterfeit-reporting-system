@@ -1,35 +1,12 @@
-<<<<<<< HEAD
-
-import React, { Component } from "react";
-import { Grid, Row, Col } from "react-bootstrap";
-import './Typography.css';
-
-import App from "components/App.js";
-=======
 import React, { Component } from "react";
 import { Grid, Row, Col } from "react-bootstrap";
 import "./Typography.css";
 /* import Main from "components/Main.js";
 import App from "components/App.js"; */
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
 
 import Card from "components/Card/Card";
 import { iconsArray } from "variables/Variables.jsx";
 
-<<<<<<< HEAD
-import {Redirect} from 'react-router-dom';
-
-
-class Icons extends Component {
-
-
-setRedirect (event) {
-  console.log("this is an alert");
-  const url = 'http://localhost:3001/';
-    window.open(url, '_blank');
-}
-
-=======
 import { Redirect } from "react-router-dom";
 
 import Blockchain from "components/Blockchain";
@@ -109,7 +86,6 @@ class Icons extends Component {
     const url = "https://etherscan.io/";
     window.open(url, "_blank");
   }
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
 
   render() {
     return (
@@ -118,35 +94,6 @@ class Icons extends Component {
           <Row>
             <Col md={12}>
               <div class="card88">
-<<<<<<< HEAD
-              <Card
-                title="Status of your Alert"
-                ctAllIcons
-                category={
-                  <span>
-                    Check the status of your Alert on Blockchain
-                    
-                  </span>
-                }
-                content={
-                  <Row>
-                        <Col
-                          lg={2}
-                          md={3}
-                          sm={4}
-                          xs={6}
-                          className="font-icon-list"
-                        >
-                          
-                          <button type="submit" class="popup-status-button" onClick ={this.setRedirect}>Alert Status</button> 
-
-                        </Col>
-                     
-                 
-                  </Row>
-                }
-              />
-=======
                 <Card
                   title="Status of your Alert"
                   ctAllIcons
@@ -173,17 +120,11 @@ class Icons extends Component {
                     </Row>
                   }
                 />
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
               </div>
             </Col>
           </Row>
         </Grid>
-<<<<<<< HEAD
-
-      
-=======
         <Blockchain products={this.state.products} />
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
       </div>
     );
   }

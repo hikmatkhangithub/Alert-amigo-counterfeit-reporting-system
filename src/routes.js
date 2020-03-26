@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /*!
 
 =========================================================
@@ -26,17 +26,8 @@ import Notifications from "views/Notifications.jsx";
 import Upgrade from "views/Upgrade.jsx";
 import SignUpForm from "components/SignUpForm/SignUpForm.jsx";
 import Logout from "components/Logout/Logout.jsx";
-=======
-//import Dashboard from "views/Dashboard.jsx";
-import UserProfile from "views/UserProfile.jsx";
-import Typography from "views/Typography.jsx";
-import Icons from "views/Icons.jsx";
-import Maps from "views/Maps.jsx";
-import AdminDashboard from "views/AdminDashboard";
-import Notifications from "views/Notifications.jsx";
-import Upgrade from "views/Upgrade.jsx";
 
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
+
 const dashboardRoutes = [
   {
     path: "/notifications",
@@ -45,7 +36,7 @@ const dashboardRoutes = [
     component: Notifications,
     layout: "/admin"
   },
-<<<<<<< HEAD
+
   // {
   //   path: "/signup",
   //   name: "SignUp Form",
@@ -53,15 +44,6 @@ const dashboardRoutes = [
   //   component: SignUpForm,
   //   layout: "/admin"
   // },
-=======
-  /*  {
-    path: "/dashboard",
-    name: "Sign In/Sign Up",
-    icon: "pe-7s-user",
-    component: Dashboard,
-    layout: "/admin"
-  }, */
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
 
   {
     path: "/user",
@@ -77,7 +59,6 @@ const dashboardRoutes = [
     component: Typography,
     layout: "/admin"
   },
-<<<<<<< HEAD
   // {
   //   path: "/table",
   //   name: "Table List",
@@ -86,8 +67,6 @@ const dashboardRoutes = [
   //   layout: "/admin"
   // },
 
-=======
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
   {
     path: "/icons",
     name: "Status",
@@ -103,7 +82,7 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-<<<<<<< HEAD
+
     path: "/logout",
     name: "Log out",
     icon: "pe-7s-user",
@@ -111,14 +90,7 @@ const dashboardRoutes = [
     layout: "/admin"
   },
 
-=======
-    path: "/admindashboard",
-    name: "Admin Dashboard",
-    icon: "pe-7s-bell",
-    component: AdminDashboard,
-    layout: "/admin"
-  }
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
+
 ];
 
 export default dashboardRoutes;

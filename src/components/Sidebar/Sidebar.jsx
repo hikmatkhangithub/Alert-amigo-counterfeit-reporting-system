@@ -17,17 +17,9 @@
 */
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-<<<<<<< HEAD
-import './Sidebar.css';
-import AdminNavbarLinks from "../Navbars/AdminNavbarLinks.jsx";
-
-import logo from "assets/img/reactlogo.png";
-
-=======
 import "./Sidebar.css";
 import AdminNavbarLinks from "../Navbars/AdminNavbarLinks.jsx";
 
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
 class Sidebar extends Component {
   constructor(props) {
     super(props);
@@ -56,28 +48,6 @@ class Sidebar extends Component {
         data-color={this.props.color}
         data-image={this.props.image}
       >
-<<<<<<< HEAD
-          {this.props.hasImage ? (
-            <div className="sidebar-background" style={sidebarBackground} />
-          ) : (
-            null
-          )}
-        <div className="logo">
-          {/* <a
-            href="https://www.creative-tim.com?ref=lbd-sidebar"
-            className="simple-text logo-mini"
-          > */}
-            <div className="logo-img">
-              {/* <img src={logo} alt="logo_image" /> */}
-            </div>
-          {/* </a> */}
-          {/* <a
-            href="https://www.creative-tim.com?ref=lbd-sidebar"
-            className="simple-text logo-normal"
-          > */}
-           <h3 class="title"> Alert Amigo<h2 class= "beta"> Beta</h2></h3>
-          {/* </a> */}
-=======
         {this.props.hasImage ? (
           <div className="sidebar-background" style={sidebarBackground} />
         ) : null}
@@ -91,7 +61,6 @@ class Sidebar extends Component {
               <h2 className="beta"> Beta</h2>
             </div>
           </h3>
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
         </div>
         <div className="sidebar-wrapper">
           <ul className="nav">

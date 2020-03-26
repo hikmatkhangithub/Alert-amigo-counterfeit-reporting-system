@@ -656,22 +656,13 @@
 }
 
 .App__Aside {
-<<<<<<< HEAD
   max-width: 50%;
-=======
-  width: 50%;
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
   background-color: #66DAC7;
 }
 
 .App__Form {
-<<<<<<< HEAD
   width: 65%;
   background-color: white;
-=======
-  width: 100%;
-  background-color: #333;
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
   padding: 25px 40px;
   overflow: auto;
 }
@@ -683,13 +674,8 @@
 }
 
 .PageSwitcher__Item {
-<<<<<<< HEAD
   background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 50%, #895cf2 100%);
   color: #333;
-=======
-  background-color: #777;
-  color: #9DA6B1;
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
   padding: 10px 25px;
   cursor: pointer;
   font-size: .9em;
@@ -700,13 +686,8 @@
 }
 
 .PageSwitcher__Item--Active {
-<<<<<<< HEAD
   background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 50%, #895cf2 100%);
   color: #333;
-=======
-  background-color: #555;
-  color: white;
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
 }
 
 .PageSwitcher__Item:first-child {
@@ -726,10 +707,6 @@
   color: #707C8B;
   font-weight: 300;
   margin-bottom: 50px;
-<<<<<<< HEAD
-=======
-	text-align: center;
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
 }
 
 .FormTitle__Link {
@@ -746,13 +723,8 @@
 }
 
 .FormTitle__Link--Active {
-<<<<<<< HEAD
   color: #333;
   border-bottom: 1px solid #199087;
-=======
-  color: white;
-  border-bottom: 1px solid #ccc;
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
 }
 
 .FormField {
@@ -763,21 +735,13 @@
   display: block;
   text-transform: uppercase;
   font-size: .9em;
-<<<<<<< HEAD
   color: #333;
-=======
-  color: white;
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
 }
 .FormField__Input {
   width: 85%;
   background-color: transparent;
   border: none;
-<<<<<<< HEAD
   color: #333;
-=======
-  color: white;
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
   outline: none;
   border-bottom: 1px solid #445366;
   font-size: 1em;
@@ -791,13 +755,8 @@
 }
 
 .FormField__Button {
-<<<<<<< HEAD
   background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 50%, #895cf2 100%);
   color: #333;
-=======
-  background-color: #777;
-  color: white;
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
   border: none;
   outline: none;
   border-radius: 25px;
@@ -810,11 +769,7 @@
   color: #66707D;
   text-decoration: none;
   display: inline-block;
-<<<<<<< HEAD
   border-bottom: 1.5px solid #225E62;
-=======
-  border-bottom: 1.5px solid #ccc;
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
   padding-bottom: 5px;
 }
 
@@ -829,13 +784,8 @@
 }
 
 .FormField__TermsLink {
-<<<<<<< HEAD
   color: #333;
   border-bottom: 1px solid #199087;
-=======
-  color: white;
-  border-bottom: 1px solid #ccc;
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
   text-decoration: none;
   display: inline-block;
   padding-bottom: 2px;
@@ -890,7 +840,6 @@
 	width:50%;
 	margin:20px;
 }
-<<<<<<< HEAD
 .FormTitle1{
 	color:#333;
 	position: relative;
@@ -899,5 +848,3 @@
 	font-size:x-large;
 	margin-bottom:50px;
 }
-=======
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
