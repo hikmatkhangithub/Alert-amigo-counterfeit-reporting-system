@@ -1,13 +1,22 @@
+<<<<<<< HEAD
 
 import React, { Component } from "react";
 import { Grid, Row, Col } from "react-bootstrap";
 import './Typography.css';
 
 import App from "components/App.js";
+=======
+import React, { Component } from "react";
+import { Grid, Row, Col } from "react-bootstrap";
+import "./Typography.css";
+/* import Main from "components/Main.js";
+import App from "components/App.js"; */
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
 
 import Card from "components/Card/Card";
 import { iconsArray } from "variables/Variables.jsx";
 
+<<<<<<< HEAD
 import {Redirect} from 'react-router-dom';
 
 
@@ -20,6 +29,87 @@ setRedirect (event) {
     window.open(url, '_blank');
 }
 
+=======
+import { Redirect } from "react-router-dom";
+
+import Blockchain from "components/Blockchain";
+
+import Web3 from "web3";
+import Marketplace from "../abis/Marketplace.json";
+
+class Icons extends Component {
+  async componentWillMount() {
+    await this.loadWeb3();
+    await this.loadBlockchainData();
+  }
+
+  async loadWeb3() {
+    if (window.ethereum) {
+      window.web3 = new Web3(window.ethereum);
+      try {
+        await window.ethereum.enable();
+      } catch (error) {}
+    } else if (window.web3) {
+      window.web3 = new Web3(window.web3.currentProvider);
+    } else {
+      window.alert(
+        "Non-Ethereum browser detected. You should consider trying MetaMask!"
+      );
+    }
+  }
+
+  async loadBlockchainData() {
+    const web3 = window.web3;
+    // Load account
+    const accounts = await web3.eth.getAccounts();
+    this.setState({ account: accounts[0] });
+    const networkId = await web3.eth.net.getId();
+    const networkData = Marketplace.networks[networkId];
+    if (networkData) {
+      const marketplace = new web3.eth.Contract(
+        Marketplace.abi,
+        networkData.address
+      );
+      this.setState({ marketplace });
+      const productCount = await marketplace.methods.productCount().call();
+      //console.log(productCount.toString())
+      this.setState({ productCount });
+      // Load products
+      for (var i = 1; i <= productCount; i++) {
+        const product = await marketplace.methods.products(i).call();
+        // const product1 = await marketplace.methods.productss(i).call()
+
+        this.setState({
+          products: [...this.state.products, product]
+          //  productss: [...this.state.productss, product1]
+        });
+        console.log(product);
+        // console.log(product1)
+      }
+      //---------------------------------added code-----------------------------
+      //---------------------------------added code end-------------------------
+      this.setState({ loading: false });
+    } else {
+      window.alert("Marketplace contract not deployed to detected network.");
+    }
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      account: "",
+      productCount: 0,
+      products: [],
+      productss: [],
+      loading: true
+    };
+  }
+  setRedirect(event) {
+    console.log("this is an alert");
+    const url = "https://etherscan.io/";
+    window.open(url, "_blank");
+  }
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
 
   render() {
     return (
@@ -28,6 +118,7 @@ setRedirect (event) {
           <Row>
             <Col md={12}>
               <div class="card88">
+<<<<<<< HEAD
               <Card
                 title="Status of your Alert"
                 ctAllIcons
@@ -55,12 +146,44 @@ setRedirect (event) {
                   </Row>
                 }
               />
+=======
+                <Card
+                  title="Status of your Alert"
+                  ctAllIcons
+                  category={
+                    <span>Check the status of your Alert on EtherScan</span>
+                  }
+                  content={
+                    <Row>
+                      <Col
+                        lg={2}
+                        md={3}
+                        sm={4}
+                        xs={6}
+                        className="font-icon-list"
+                      >
+                        <button
+                          type="submit"
+                          class="popup-status-button"
+                          onClick={this.setRedirect}
+                        >
+                          Alert Status
+                        </button>
+                      </Col>
+                    </Row>
+                  }
+                />
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
               </div>
             </Col>
           </Row>
         </Grid>
+<<<<<<< HEAD
 
       
+=======
+        <Blockchain products={this.state.products} />
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
       </div>
     );
   }

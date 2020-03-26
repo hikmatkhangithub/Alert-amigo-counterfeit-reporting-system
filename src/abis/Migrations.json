@@ -74,7 +74,11 @@
   "sourceMap": "36:500:1:-;;;129:52;8:9:-1;5:2;;;30:1;27;20:12;5:2;129:52:1;165:10;157:5;;:18;;;;;;;;;;;;;;;;;;36:500;;;;;;",
   "deployedSourceMap": "36:500:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;36:500:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;365:168;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;365:168:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;86:36;;;:::i;:::-;;;;;;;;;;;;;;;;;;;61:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;254:105;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;254:105:1;;;;;;;;;;;;;;;;;:::i;:::-;;365:168;234:5;;;;;;;;;;;220:19;;:10;:19;;;216:26;;;428:19;461:11;428:45;;480:8;:21;;;502:24;;480:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;480:47:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;480:47:1;;;;241:1;216:26;365:168;:::o;86:36::-;;;;:::o;61:20::-;;;;;;;;;;;;;:::o;254:105::-;234:5;;;;;;;;;;;220:19;;:10;:19;;;216:26;;;344:9;317:24;:36;;;;216:26;254:105;:::o",
   "source": "pragma solidity >=0.4.21 <0.6.0;\r\n\r\ncontract Migrations {\r\n  address public owner;\r\n  uint public last_completed_migration;\r\n\r\n  constructor() public {\r\n    owner = msg.sender;\r\n  }\r\n\r\n  modifier restricted() {\r\n    if (msg.sender == owner) _;\r\n  }\r\n\r\n  function setCompleted(uint completed) public restricted {\r\n    last_completed_migration = completed;\r\n  }\r\n\r\n  function upgrade(address new_address) public restricted {\r\n    Migrations upgraded = Migrations(new_address);\r\n    upgraded.setCompleted(last_completed_migration);\r\n  }\r\n}\r\n",
+<<<<<<< HEAD
   "sourcePath": "C:/Users/hikmat khan/Alert-Amigo-with-blockchain/src/contracts/Migrations.sol",
+=======
+  "sourcePath": "C:\\Users\\hikmat khan\\Alert-Amigo-with-blockchain\\src\\contracts\\Migrations.sol",
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
   "ast": {
     "absolutePath": "/C/Users/hikmat khan/Alert-Amigo-with-blockchain/src/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -202,7 +206,11 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
+<<<<<<< HEAD
                         "referencedDeclaration": 304,
+=======
+                        "referencedDeclaration": 186,
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
                         "src": "165:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -286,7 +294,11 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
+<<<<<<< HEAD
                         "referencedDeclaration": 304,
+=======
+                        "referencedDeclaration": 186,
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
                         "src": "220:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -851,7 +863,11 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
+<<<<<<< HEAD
                         "referencedDeclaration": 304,
+=======
+                        "referencedDeclaration": 186,
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
                         "src": "165:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -935,7 +951,11 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
+<<<<<<< HEAD
                         "referencedDeclaration": 304,
+=======
+                        "referencedDeclaration": 186,
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
                         "src": "220:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -1378,6 +1398,7 @@
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {
+<<<<<<< HEAD
     "5777": {
       "events": {},
       "links": {},
@@ -1387,6 +1408,30 @@
   },
   "schemaVersion": "3.0.22",
   "updatedAt": "2020-02-17T14:22:57.511Z",
+=======
+    "3": {
+      "events": {},
+      "links": {},
+      "address": "0x37CB2D1668bf2B00da54CE6C53C01a3ae6c3e157",
+      "transactionHash": "0xecd042044627b96055163531514eefaae11e11894a63692809d4ebb38993936c"
+    },
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0xa6dd82e709fDEF803965feA45F1F166B1ae9B630",
+      "transactionHash": "0xf7c091f4eaf49ed4fdd9728cfbdded57d8aa9f5d26f0cd2c58044bba36bc7ed4"
+    },
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xA69F0840853dB489d0371ec73fD5D58aABaaE4FD",
+      "transactionHash": "0xe567b91d1116a8755abffe08dd228b957ded86416d9b9231fe71c8d236dbb1e8"
+    }
+  },
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-03-05T20:36:45.539Z",
+  "networkType": "ethereum",
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
   "devdoc": {
     "methods": {}
   },

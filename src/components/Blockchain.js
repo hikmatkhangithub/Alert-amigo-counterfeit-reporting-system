@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component } from 'react';
 import Navbar from './Navbar'
 import Main from './Main'
@@ -229,11 +230,59 @@ axios.post('https://alert-amigo-api.herokuapp.com/products', form, {
           </div>
           <button type="submit" className="btn btn-primary" onClick ={this.onClickHandler}>Add Product</button>
         </form>
+=======
+import React, { Component } from "react";
+/* import Main from "./Main";
+import App from "./App";
+import axios from "axios"; */
+
+class Blockchain extends Component {
+  
+  render() {
+    return (
+      <div id="content">
+        <h2>Submitted report</h2>
+
+        <div id="productList">
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Category</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Country of origin</th>
+                <th scope="col">Owner</th>
+              </tr>
+            </thead>
+            <tbody id="productList">
+              {this.props.products.map((product, key) => {
+                return (
+                  <tr key={key}>
+                    <th scope="row">{product.id.toString()}</th>
+                    <td> {product.pname}</td>
+                    <td> {product.price.toString()}</td>
+                    <td> {product.pCategory} </td>
+                    <td> {product.pBrand}</td>
+                    <td> {product.pCountryOfOrigin}</td>
+                    <td> {product.owner}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
       </div>
     );
   }
 }
 
+<<<<<<< HEAD
 
 
 export default Blockchain
+=======
+export default Blockchain;
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164

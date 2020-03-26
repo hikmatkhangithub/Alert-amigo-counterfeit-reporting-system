@@ -19,6 +19,7 @@ import React, { Component } from "react";
 import NotificationSystem from "react-notification-system";
 
 import AdminNavbar from "components/Navbars/AdminNavbar";
+<<<<<<< HEAD
 // import Footer from "components/Footer/Footer";
 import Sidebar from "components/Sidebar/Sidebar";
 import './Admin.css';
@@ -27,10 +28,20 @@ import SignUpForm from "components/SignUpForm/SignUpForm.jsx";
 
 import { HashRouter as Router, Switch, Route, Link, NavLink } from 'react-router-dom';
 import Dashboard from "views/Dashboard.jsx";
+=======
+//import Footer from "components/Footer/Footer";
+import Sidebar from "components/Sidebar/Sidebar";
+import "./Admin.css";
+/* import SignInForm from "components/SignInForm/SignInForm.jsx";
+import SignUpForm from "components/SignUpForm/SignUpForm.jsx"; */
+
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
 
 import { style } from "variables/Variables.jsx";
 
 import routes from "routes.js";
+<<<<<<< HEAD
 import Notifications from "views/Notifications.jsx";
 
 
@@ -38,14 +49,26 @@ class Admin extends Component {
   constructor() {
     super();
     this.state = ({
+=======
+
+class Admin extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
       _notificationSystem: null,
 
       color: "purple",
       //  gradient
 
+<<<<<<< HEAD
       fixedClasses: "dropdown show-dropdown open",
     });
 
+=======
+      fixedClasses: "dropdown show-dropdown open"
+    };
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
   }
   handleNotificationClick = position => {
     var color = Math.floor(Math.random() * 4 + 1);
@@ -128,7 +151,10 @@ class Admin extends Component {
     }
   };
   componentDidMount() {
+<<<<<<< HEAD
   
+=======
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
     this.setState({ _notificationSystem: this.refs.notificationSystem });
     var _notificationSystem = this.refs.notificationSystem;
     var color = Math.floor(Math.random() * 4 + 1);
@@ -149,7 +175,10 @@ class Admin extends Component {
       default:
         break;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
   }
   componentDidUpdate(e) {
     if (
@@ -165,6 +194,7 @@ class Admin extends Component {
       this.refs.mainPanel.scrollTop = 0;
     }
   }
+<<<<<<< HEAD
 
   render() {
     return (
@@ -196,6 +226,24 @@ class Admin extends Component {
 
 
 
+=======
+  render() {
+    return (
+      <div className="wrapper">
+        <NotificationSystem ref="notificationSystem" style={style} />
+        <Sidebar {...this.props} routes={routes} color={this.state.color} />
+        <div id="main-panel" className="main-panel" ref="mainPanel">
+          <div className="header">
+            <AdminNavbar
+              {...this.props}
+              brandText={this.getBrandText(this.props.location.pathname)}
+            />
+          </div>
+          <Switch>{this.getRoutes(routes)}</Switch>
+          {/* <Footer /> */}
+        </div>
+      </div>
+>>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
     );
   }
 }
