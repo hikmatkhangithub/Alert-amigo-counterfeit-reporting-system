@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Badge } from "reactstrap";
 import Web3 from "web3";
 import Marketplace from "../abis/Marketplace.json";
-
+import fire from "components/config/fire";
 import Logo from "./tick.png";
 
 class AdminDashboard extends Component {
@@ -150,6 +150,12 @@ class AdminDashboard extends Component {
       });
     }
   };
+
+  logout(e) {
+    e.preventDefault();
+
+    fire.auth().signOut();
+  }
   render() {
     const { error, isLoaded, products } = this.state;
     if (error) {
@@ -160,8 +166,14 @@ class AdminDashboard extends Component {
       return (
         <div id="content">
           <div className="container">
-            <h2 className="abc">All Report</h2>
+            <h2 className="abc">All Report </h2>
+            <span className="logout-button">
+              <button className="btn btn-primary" onClick={this.logout}>
+                Logout{" "}
+              </button>
+            </span>
             <hr className="new1"></hr>
+
             <div className="cards cards-maps">
               {products.map(item => (
                 <ul className="ul-design" key={item.id}>

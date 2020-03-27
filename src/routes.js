@@ -3,9 +3,8 @@ import UserProfile from "views/UserProfile.jsx";
 import Typography from "views/Typography.jsx";
 import Icons from "views/Icons.jsx";
 import Maps from "views/Maps.jsx";
-import AdminDashboard from "views/AdminDashboard";
 import Notifications from "views/Notifications.jsx";
-import Upgrade from "views/Upgrade.jsx";
+import AdminLogin from "views/AdminLogin";
 
 const dashboardRoutes = [
   {
@@ -52,10 +51,10 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/admindashboard",
+    path: "/AdminLogin",
     name: "Admin Dashboard",
     icon: "pe-7s-bell",
-    component: AdminDashboard,
+    component: AdminLogin,
     layout: "/admin"
   }
 ];
