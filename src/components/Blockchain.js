@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch, Redirect, Link } from "react-router-dom";
-import Logo from "views/tick.png";
+import Logo from "views/images/tick.png";
 
 class Blockchain extends Component {
   render() {

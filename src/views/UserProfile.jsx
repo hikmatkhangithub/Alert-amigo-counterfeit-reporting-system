@@ -1,21 +1,6 @@
-/*!
-
-=========================================================
-* Light Bootstrap Dashboard React - v1.3.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React, { Component } from "react";
+import Suggestions from "./Suggestions";
+
 import { Link } from "react-router-dom";
 import { Form, FormControl, FormCheck, Col } from "react-bootstrap";
 import {
@@ -43,133 +28,59 @@ function FieldGroup({ id, label, help, ...props }) {
   );
 }
 
-class UserProfile extends Component {
-  constructor() {
-    super();
+const { API_KEY } = "2caa57ac-0f99-48f3-9baa-8217978f9be9";
+const API_URL = "https://alert-amigo-api.herokuapp.com/products";
 
+class UserProfile extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
-      productName: "",
-      productCategory: "",
-      productBrand: "",
-      riskType: ""
+      error: null,
+      isLoaded: false,
+      results: []
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  changeHandler = e => {
-    this.setState({ [e.target.id]: e.target.value });
+  getInfo = () => {
+    axios
+      .get(`${API_URL}?api_key=${API_KEY}&prefix=${this.state.query}&limit=4`)
+      .then(({ data }) => {
+        this.setState({
+          results: data.products
+        });
+      });
   };
 
-  handleSubmit(e) {
-    e.preventDefault();
-
-    console.log("The form was submitted with the following data:");
-    console.log(this.state);
-    // axios
-    //   .post('https://alert-amigo-api.herokuapp.com/products',this.state)
-    //   .then(response => {
-    //     console.log(response)
-    //   })
-    //   .catch(error => {
-    //     console.log(error)
-    //   })
-  }
-  // fetch('https://alert-amigo-api.herokuapp.com/products',{
-  //     method: 'POST',
-  //     headers: {
-  //         Accept: 'application/json',
-  //                 'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify(this.state)
-  // }).then(response => {
-  //         console.log(response)
-  //     })
-  //     .catch(error =>{
-  //         console.log(error)
-  //     });
+  handleInputChange = () => {
+    this.setState(
+      {
+        query: this.search.value
+      },
+      () => {
+        if (this.state.query && this.state.query.length > 1) {
+          if (this.state.query.length % 2 === 1) {
+            this.getInfo();
+          }
+        } else if (!this.state.query) {
+        }
+      }
+    );
+  };
 
   render() {
     return (
-      <div className="container1">
-        {/* <div className="typoForm"> */}
-
-        {/* <div className="con"> */}
-        <h2 className="search-header"> Search</h2>
-        <hr className="new1" />
-        <div className="boxing">
-          <form onSubmit={this.handleSubmit}>
-            <FieldGroup
-              id="productName"
-              name="productName"
-              type="text"
-              label="Product Name"
-              placeholder=""
-              value={this.state.productName}
-              onChange={this.changeHandler}
-            />
-
-            <div class="sm-3">
-              <FormGroup controlId="productCategory" name="productCategory">
-                <ControlLabel>Category</ControlLabel>
-                <FormControl
-                  componentClass="select"
-                  name="productCategory"
-                  placeholder="select"
-                  onChange={this.changeHandler}
-                  value={this.state.selectValue}
-                >
-                  <option value="select">
-                    select the category to which the product belongs to
-                  </option>
-                  <option value="electronics">Electronics</option>
-                  <option value="cosmetics">Cosmetics</option>
-                  <option value="apparels">Apparels</option>
-                  <option value="footwear">Footwear</option>
-                  <option value="accessories">Watches/Accessories</option>
-                  <option value="handbags">Handbags/Wallets</option>
-                  <option value="pharmaceuticals">
-                    Pharmaceuticals/Personal Care
-                  </option>
-                  <option value="Toys">Toys</option>
-                </FormControl>
-              </FormGroup>
-            </div>
-
-            <div class="sm-3">
-              <FieldGroup
-                id="productBrand"
-                name="productBrand"
-                type="text"
-                label="Product Brand"
-                placeholder=""
-                value={this.state.productBrand}
-                onChange={this.changeHandler}
-              />
-            </div>
-            <FormGroup controlId="riskType" name="riskType">
-              <ControlLabel>Risk Type</ControlLabel>
-              <FormControl
-                componentClass="select"
-                placeholder="select"
-                name="riskType"
-                onChange={this.changeHandler}
-                value={this.state.selectValue}
-              >
-                <option value="select">select the level of risk</option>
-                <option value="high">high</option>
-                <option value="medium">medium</option>
-                <option value="low">low</option>
-              </FormControl>
-            </FormGroup>
-
-            <button type="submit" class="popup-button">
-              Search
-            </button>
-          </form>
-        </div>
+      <div className="content-margin">
+        <form>
+          <input
+            placeholder="Search for..."
+            ref={input => (this.search = input)}
+            onChange={this.handleInputChange}
+          />
+          <Suggestions results={this.state.results} />
+        </form>
       </div>
-      // </div>
     );
   }
 }
+
 export default UserProfile;

@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "Abc.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Badge } from "reactstrap";
 import Web3 from "web3";
 import Marketplace from "../abis/Marketplace.json";
-import fire from "components/config/fire";
-import Logo from "./tick.png";
+import { fire, facebookProvider } from "components/config/Fire";
+import Logo from "./images/tick.png";
 
 class AdminDashboard extends Component {
   async componentWillMount() {
@@ -42,23 +41,6 @@ class AdminDashboard extends Component {
         networkData.address
       );
       this.setState({ marketplace });
-      // const productCount = await marketplace.methods.productCount().call();
-      //console.log(productCount.toString())
-      //   this.setState({ productCount });
-      // Load products
-      /*  for (var i = 1; i <= productCount; i++) {
-        const product = await marketplace.methods.products(i).call();
-        // const product1 = await marketplace.methods.productss(i).call()
-
-        this.setState({
-          products: [...this.state.products, product]
-          //  productss: [...this.state.productss, product1]
-        });
-        console.log(product);
-        // console.log(product1)
-      } */
-      //---------------------------------added code-----------------------------
-      //---------------------------------added code end-------------------------
       this.setState({ loading: false });
     } else {
       window.alert("Marketplace contract not deployed to detected network.");
@@ -168,7 +150,10 @@ class AdminDashboard extends Component {
           <div className="container">
             <h2 className="abc">All Report </h2>
             <span className="logout-button">
-              <button className="btn btn-primary" onClick={this.logout}>
+              <button
+                className=" btn btn-outline-primary "
+                onClick={this.logout}
+              >
                 Logout{" "}
               </button>
             </span>

@@ -1,4 +1,4 @@
-import firebase from "firebase";
+import firebase from 'firebase';
 
 const config = {
   apiKey: "AIzaSyBMk20ZH_PtKUeirgu8rCQz4s7dB4XGwUg",
@@ -13,4 +13,4 @@ const config = {
 
 const fire = firebase.initializeApp(config);
 const facebookProvider = new firebase.auth.FacebookAuthProvider();
-export { fire, facebookProvider };
+export { fire, facebookProvider }

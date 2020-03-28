@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Home from "./AdminDashboard";
-import fire from "components/config/fire";
+import { fire, facebookProvider } from "components/config/Fire";
 
 class AdminLogin extends Component {
   constructor(props) {
@@ -11,7 +11,8 @@ class AdminLogin extends Component {
     this.state = {
       email: "",
       password: "",
-      user: {}
+      user: {},
+      isAdmin: false
     };
   }
   componentDidMount() {
@@ -21,9 +22,18 @@ class AdminLogin extends Component {
   authListener() {
     fire.auth().onAuthStateChanged(user => {
       console.log(user);
+
       if (user) {
         this.setState({ user });
         localStorage.setItem("user", user.uid);
+
+        // --------admin condition--------------
+        if (user.uid === "BMztOE7tjuUIkFN51WINxlqMaT82") {
+          this.setState({ isAdmin: true });
+          alert("This is admin account " + this.state.isAdmin);
+        } else {
+          this.setState({ isAdmin: false });
+        }
       } else {
         this.setState({ user: null });
         localStorage.removeItem("user");
@@ -53,7 +63,7 @@ class AdminLogin extends Component {
   render() {
     return (
       <div className="container">
-        {this.state.user ? (
+        {this.state.user && this.state.isAdmin ? (
           <Home />
         ) : (
           <div className="row  align-self-center row-design">
