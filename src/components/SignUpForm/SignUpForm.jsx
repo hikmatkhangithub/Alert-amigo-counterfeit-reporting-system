@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { fire, facebookProvider } from "components/config/Fire";
+import { fire, facebookProvider } from "components/Config/Fire";
 //import fire from "components/config/Fire";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 class SignUpForm extends Component {

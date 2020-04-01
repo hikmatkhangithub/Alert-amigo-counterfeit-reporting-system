@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Home from "./AdminDashboard";
-import { fire, facebookProvider } from "components/config/Fire";
+import { fire, facebookProvider } from "components/Config/Fire";
 
 class AdminLogin extends Component {
   constructor(props) {

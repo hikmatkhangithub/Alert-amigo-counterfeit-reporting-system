@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { fire, facebookProvider } from 'components/config/Fire';
+import { fire, facebookProvider } from "components/Config/Fire";
 //import fire from "components/config/Fire";
 import Home from "views/Home.jsx";
 class Logout extends Component {

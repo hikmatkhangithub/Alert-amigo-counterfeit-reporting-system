@@ -15,7 +15,7 @@ import {
   Link,
   NavLink
 } from "react-router-dom";
-import fire from "components/config/Fire";
+import fire from "components/Config/Fire";
 
 class Dashboard extends Component {
   render() {

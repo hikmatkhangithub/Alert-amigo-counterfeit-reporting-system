@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Home from "views/Home";
 
-import { fire, facebookProvider } from "components/config/Fire";
+import { fire, facebookProvider } from "components/Config/Fire";
 //import fire from "components/config/Fire";
 import SignInForm from "components/SignInForm/SignInForm.jsx";
 import Notifications from "views/Notifications.jsx";

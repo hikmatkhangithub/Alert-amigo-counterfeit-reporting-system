@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { fire, facebookProvider } from "components/config/Fire";
+import { fire, facebookProvider } from "components/Config/Fire";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import SignUpForm from "components/SignUpForm/SignUpForm.jsx";
 import { Toaster, Intent } from "@blueprintjs/core";

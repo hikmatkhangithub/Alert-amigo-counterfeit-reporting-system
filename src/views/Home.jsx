@@ -4,7 +4,7 @@ import { Table, Grid, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Switch, Redirect, Link } from "react-router-dom";
 import AdminLayout from "layouts/Admin.jsx";
-import { fire, facebookProvider } from "components/config/Fire";
+import { fire, facebookProvider } from "components/Config/Fire";
 //import fire from "components/config/Fire";
 // import "./main.css";
 // import Home from "./views/Home";

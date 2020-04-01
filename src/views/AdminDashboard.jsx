@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Badge } from "reactstrap";
 import Web3 from "web3";
 import Marketplace from "../abis/Marketplace.json";
-import { fire, facebookProvider } from "components/config/Fire";
+import { fire, facebookProvider } from "components/Config/Fire";
 import Logo from "./images/tick.png";
 
 class AdminDashboard extends Component {
