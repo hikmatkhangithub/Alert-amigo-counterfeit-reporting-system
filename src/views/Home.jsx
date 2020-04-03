@@ -5,11 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Switch, Redirect, Link } from "react-router-dom";
 import AdminLayout from "layouts/Admin.jsx";
 import { fire, facebookProvider } from "components/Config/Fire";
-//import fire from "components/config/Fire";
-// import "./main.css";
-// import Home from "./views/Home";
 
-// import './Abc.css';
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -31,10 +27,10 @@ class Home extends React.Component {
               Web Engineering Project
             </p>
           </div>
+
           <div style={{ padding: "6em" }}>
             <h1 class="welcome">Alert Amigo</h1>
             <hr class="new2" />
-            <Route path="/admin" render={props => <AdminLayout {...props} />} />
             <div
               class="card"
               style={{ width: "90rem", position: "relative", left: "15pc" }}
@@ -45,6 +41,7 @@ class Home extends React.Component {
                   Friend' is a web application designed on Blockchain technology
                   to fight against counterfeit goods
                 </p>
+
                 <Link to="/admin/notifications">
                   <button
                     className="logout-button"

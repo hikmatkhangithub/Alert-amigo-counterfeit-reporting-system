@@ -5,17 +5,13 @@ import report from "./images/report.png";
 import alertsbell from "./images/alertsbell.png";
 import { fire, facebookProvider } from "components/Config/Fire";
 import Typography from "views/Typography.jsx";
+import { Redirect } from "react-router-dom";
 import one from "./one.png";
 import note from "./note.png";
 import rep from "./rep.png";
 class Notifications extends Component {
   constructor(props) {
     super(props);
-    this.logout = this.logout.bind(this);
-  }
-
-  logout() {
-    fire.auth().signOut();
   }
 
   render() {
@@ -23,6 +19,7 @@ class Notifications extends Component {
       <div>
         <div class="alert-1">
           <h4 class="alert-heading">Well done! 🎉 </h4>
+
           <p class="k">
             You are just one step away to help fight against counterfeiting.
           </p>

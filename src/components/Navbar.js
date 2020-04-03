@@ -1,39 +1,36 @@
-import React, { Component } from 'react';
-
+import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 class Navbar extends Component {
-
   render() {
     return (
-      <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-        <a
-          className="navbar-brand col-sm-3 col-md-2 mr-0"
-          href="/admin/App"
-          target="_self"
-          rel="noopener noreferrer"
-        >
-         Alert Amigo
-        </a>
-        <a
-          className="navbar-brand col-sm-3 col-md-2 mr-0"
-          href="/admin/Blockchain"
-          target="_self"
-          rel="noopener noreferrer"
-        >
-        Blockchain Data
-        </a>
-        <a
-          className="navbar-brand col-sm-3 col-md-2 mr-0"
-          href="/admin/MongoData"
-          target="_self"
-          rel="noopener noreferrer"
-        >
-        mongodb data
-        </a>
-        <ul className="navbar-nav px-3">
-          <li className="nav-item text-nowrap d-none d-sm-none d-sm-block">
-            <small className="text-white"><span id="account">{this.props.account}</span></small>
-          </li>
-        </ul>
+      <nav className="navbar navbar-expand-sm navbar-purple bg-purple mb-4">
+        <div className="container">
+          <NavLink className="navbar-brand" to="/">
+            Acme Staff Portal
+          </NavLink>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/">
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/staff">
+                  Staff
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     );
   }

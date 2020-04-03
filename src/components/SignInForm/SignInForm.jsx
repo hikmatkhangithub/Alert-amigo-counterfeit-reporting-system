@@ -4,6 +4,10 @@ import { fire, facebookProvider } from "components/Config/Fire";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import SignUpForm from "components/SignUpForm/SignUpForm.jsx";
 import { Toaster, Intent } from "@blueprintjs/core";
+
+import { createBrowserHistory } from "history";
+const history = createBrowserHistory();
+
 class SignInForm extends Component {
   constructor(props) {
     super(props);
@@ -41,7 +45,9 @@ class SignInForm extends Component {
     fire
       .auth()
       .signInWithEmailAndPassword(this.state.email, this.state.password)
-      .then(u => {})
+      .then(u => {
+      /*   history.push("/admin/notifications"); */
+      })
       .catch(error => {
         console.log(error);
         alert(error);

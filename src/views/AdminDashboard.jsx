@@ -205,7 +205,10 @@ class AdminDashboard extends Component {
                   </li>
                   <li>
                     <b>Image Path:</b>
-                    <a href="https://alert-amigo-api.herokuapp.com/products/" target="_blank">
+                    <a
+                      href="https://alert-amigo-api.herokuapp.com/products/"
+                      target="_blank"
+                    >
                       {item.productImage}{" "}
                     </a>
                   </li>

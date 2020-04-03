@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { fire, facebookProvider } from "components/Config/Fire";
 //import fire from "components/config/Fire";
 import Home from "views/Home.jsx";
+import { Modal, Button } from "react-bootstrap";
+import { Route } from "react-router-dom";
+
 class Logout extends Component {
   constructor(props) {
     super(props);
@@ -13,6 +16,7 @@ class Logout extends Component {
       .auth()
       .signOut()
       .then(function() {
+        Route.history.push("/");
         console.log("sign out success");
       })
       .catch(function(error) {
@@ -24,13 +28,7 @@ class Logout extends Component {
     return (
       <div className="content-margin">
         <h4>Are you sure you want to logout?</h4>
-        <button>
-          <a href="http://localhost:3000/signin">Yes</a>
-        </button>
-        <button style={{ position: "relative", left: "30px" }}>
-          <a href="http://localhost:3000/admin/notifications">No</a>
-        </button>
-        {/*<button><a href="http://localhost:3000/sign-in">Home</a></button>*/}
+        <button onClick={this.logout}>Logout</button>
       </div>
     );
   }

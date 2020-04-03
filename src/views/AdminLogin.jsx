@@ -7,7 +7,6 @@ class AdminLogin extends Component {
     super(props);
     this.login = this.login.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.signup = this.signup.bind(this);
     this.state = {
       email: "",
       password: "",
@@ -26,7 +25,7 @@ class AdminLogin extends Component {
       if (user) {
         this.setState({ user });
         localStorage.setItem("user", user.uid);
-
+        localStorage.setItem("user", user.refreshToken);
         // --------admin condition--------------
         if (user.uid === "BMztOE7tjuUIkFN51WINxlqMaT82") {
           this.setState({ isAdmin: true });
@@ -55,10 +54,6 @@ class AdminLogin extends Component {
         alert("Not a valid username and password");
         console.log(error);
       });
-  }
-
-  signup(e) {
-    e.preventDefault();
   }
   render() {
     return (

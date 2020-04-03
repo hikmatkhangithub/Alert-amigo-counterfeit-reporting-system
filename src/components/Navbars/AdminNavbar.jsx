@@ -17,6 +17,7 @@
 */
 import React, { Component } from "react";
 import { Navbar } from "react-bootstrap";
+import { Redirect } from "react-router-dom";
 // import AdminNavbarLinks from "./AdminNavbarLinks.jsx";
 
 class Header extends Component {
@@ -27,6 +28,7 @@ class Header extends Component {
       sidebarExists: false
     };
   }
+
   mobileSidebarToggle(e) {
     if (this.state.sidebarExists === false) {
       this.setState({
@@ -47,16 +49,13 @@ class Header extends Component {
     return (
       <Navbar fluid>
         <Navbar.Header>
-
           <Navbar.Brand>
             <a href="#pablo">{this.props.brandText}</a>
           </Navbar.Brand>
-          <Navbar.Toggle onClick={this.mobileSidebarToggle} />
 
+          <Navbar.Toggle onClick={this.mobileSidebarToggle} />
         </Navbar.Header>
-        <Navbar.Collapse>
-          {/* <AdminNavbarLinks /> */}
-        </Navbar.Collapse>
+        <Navbar.Collapse>{/* <AdminNavbarLinks /> */}</Navbar.Collapse>
       </Navbar>
     );
   }
