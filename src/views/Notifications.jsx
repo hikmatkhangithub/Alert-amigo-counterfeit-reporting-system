@@ -34,7 +34,7 @@ class Notifications extends Component {
         <div class="container">
           <div class="col-md-3">
             <div class="card2">
-              <a href="http://localhost:3000/admin/user">
+              <a href="/admin/user">
                 <div class="cardheader iconcolor2">
                   <img src={one} />
                 </div>
@@ -54,7 +54,7 @@ class Notifications extends Component {
 
           <div class="col-md-3">
             <div class="card2">
-              <a href="http://localhost:3000/admin/typography">
+              <a href="/admin/typography">
                 <div class="cardheader iconcolor2">
                   <img src={rep} />
                 </div>
@@ -74,7 +74,7 @@ class Notifications extends Component {
 
           <div class="col-md-3">
             <div class="card2">
-              <a href="http://localhost:3000/admin/maps">
+              <a href="/admin/maps">
                 <div class="cardheader iconcolor2">
                   <img src={note} />
                 </div>

@@ -1,23 +1,5 @@
-/*!
-
-=========================================================
-* Light Bootstrap Dashboard React - v1.3.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import Dashboard from "views/Dashboard.jsx";
 import UserProfile from "views/UserProfile.jsx";
-// import TableList from "views/TableList.jsx";
 import Typography from "views/Typography.jsx";
 import Icons from "views/Icons.jsx";
 import Maps from "views/Maps.jsx";
@@ -35,7 +17,7 @@ const dashboardRoutes = [
     name: "Getting Started",
     icon: "pe-7s-home",
     component: Notifications,
-    layout: "/admin"
+    layout: "/admin",
   },
 
   // {
@@ -51,14 +33,14 @@ const dashboardRoutes = [
     name: "Search",
     icon: "pe-7s-search",
     component: UserProfile,
-    layout: "/admin"
+    layout: "/admin",
   },
   {
     path: "/typography",
     name: "Report",
     icon: "pe-7s-news-paper",
     component: Typography,
-    layout: "/admin"
+    layout: "/admin",
   },
   // {
   //   path: "/table",
@@ -73,29 +55,29 @@ const dashboardRoutes = [
     name: "Status",
     icon: "pe-7s-science",
     component: Icons,
-    layout: "/admin"
+    layout: "/admin",
   },
   {
     path: "/maps",
     name: "All Alerts",
     icon: "pe-7s-bell",
     component: Maps,
-    layout: "/admin"
+    layout: "/admin",
   },
   {
     path: "/AdminLogin",
     name: "Admin Dashboard",
     icon: "pe-7s-bell",
     component: AdminLogin,
-    layout: "/admin"
+    layout: "/admin",
   },
   {
     path: "/logout",
     name: "Log out",
     icon: "pe-7s-user",
     component: Logout,
-    layout: "/admin"
-  }
+    layout: "/admin",
+  },
 ];
 
 export default dashboardRoutes;

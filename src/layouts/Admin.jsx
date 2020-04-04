@@ -15,7 +15,7 @@ import {
   Route,
   Link,
   NavLink,
-  Redirect
+  Redirect,
 } from "react-router-dom";
 import Dashboard from "views/Dashboard.jsx";
 
@@ -37,13 +37,13 @@ class Admin extends Component {
       email: "",
       password: "",
       user: {},
-      isAdmin: false
+      isAdmin: false,
     };
     this.login = this.login.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.signup = this.signup.bind(this);
   }
-  handleNotificationClick = position => {
+  handleNotificationClick = (position) => {
     var color = Math.floor(Math.random() * 4 + 1);
     var level;
     switch (color) {
@@ -72,16 +72,16 @@ class Admin extends Component {
       ),
       level: level,
       position: position,
-      autoDismiss: 15
+      autoDismiss: 15,
     });
   };
-  getRoutes = routes => {
+  getRoutes = (routes) => {
     return routes.map((prop, key) => {
       if (prop.layout === "/admin") {
         return (
           <Route
             path={prop.layout + prop.path}
-            render={props => (
+            render={(props) => (
               <prop.component
                 {...props}
                 handleClick={this.handleNotificationClick}
@@ -95,7 +95,7 @@ class Admin extends Component {
       }
     });
   };
-  getBrandText = path => {
+  getBrandText = (path) => {
     for (let i = 0; i < routes.length; i++) {
       if (
         this.props.location.pathname.indexOf(
@@ -105,12 +105,12 @@ class Admin extends Component {
         return routes[i].name;
       }
     }
-    return "Brand";
+    return "BrandNew ";
   };
   // handleImageClick = image => {
   //   this.setState({ image: image });
   // };
-  handleColorClick = color => {
+  handleColorClick = (color) => {
     this.setState({ color: color });
   };
   // handleHasImage = hasImage => {
@@ -162,7 +162,7 @@ class Admin extends Component {
     }
   }
   authListener() {
-    fire.auth().onAuthStateChanged(user => {
+    fire.auth().onAuthStateChanged((user) => {
       console.log(user);
 
       if (user) {
@@ -184,8 +184,8 @@ class Admin extends Component {
     fire
       .auth()
       .signInWithEmailAndPassword(this.state.email, this.state.password)
-      .then(u => {})
-      .catch(error => {
+      .then((u) => {})
+      .catch((error) => {
         alert("Not a valid username and password");
         console.log(error);
       });

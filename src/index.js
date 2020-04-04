@@ -11,14 +11,13 @@ import AdminLayout from "layouts/Admin.jsx";
 import Notfound from "./components/notfound";
 import * as serviceWorker from "./serviceWorker";
 
-
 let state = {};
 
 const Routing = (
   <BrowserRouter>
     <Switch>
-      <Route path="/" render={props => <AdminLayout {...props} />} />
-      <Redirect from="/admin" to="/admin/dashboard" />
+      <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
+      <Redirect from="/" to="/admin/notifications" />
       <Route component={Notfound} />
     </Switch>
   </BrowserRouter>
