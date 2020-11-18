@@ -1,4 +1,4 @@
-![alternativetext](public/schreenshot.png)
+![alternativetext](public/screenshot.png)
 # Counterfeit Reporting System Based on Blockchain Technology
 
 
