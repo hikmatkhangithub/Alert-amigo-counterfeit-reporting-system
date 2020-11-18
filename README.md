@@ -1,5 +1,7 @@
 # Counterfeit Reporting System Based on Blockchain Technology
 
+![alternativetext](public/schreenshot.png)
+
 # Named as "Alert Amigo"
 
 This project was developed as a result of our research project under the professorship of distributed and self-organizing systems. The purpose of this research project was to developed a user-friendly counterfeit reporting system based on blockchain technology, to report fake and hazardous products to the European Union authoroties and then take furthur actions. This project is an extention to the "SAFETY GATEWAY: the rapid alert system for dangerous non-food products". The significant motivation to implement this project is because of the lack of user engagement in the Safety Gate by the EU Commission.
