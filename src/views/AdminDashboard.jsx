@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import "Abc.css";
+import "../assets/css/CustomAdminStyle.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Badge } from "reactstrap";
 import Web3 from "web3";
 import Marketplace from "../abis/Marketplace.json";
-import { fire, facebookProvider } from "components/Config/Fire";
-import Logo from "./images/tick.png";
+import { fire, facebookProvider } from "components/Config/FirebaseAuth";
+import Logo from "./viewImages/tick.png";
 
 class AdminDashboard extends Component {
   async componentWillMount() {

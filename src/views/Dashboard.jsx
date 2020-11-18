@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-//import sideimage from "./images/sideimage.jpg";
+
 import SignInForm from "components/SignInForm/SignInForm.jsx";
 import SignUpForm from "components/SignUpForm/SignUpForm.jsx";
-import Notification from "views/Notifications";
 import {
   BrowserRouter as Router,
   Route,
@@ -10,9 +9,8 @@ import {
   NavLink,
   Redirect
 } from "react-router-dom";
-import { fire, facebookProvider } from "components/Config/Fire";
+import { fire, facebookProvider } from "components/Config/FirebaseAuth";
 import Home from "./Home";
-import AdminLayout from "layouts/Admin";
 
 class Dashboard extends Component {
   constructor(props) {

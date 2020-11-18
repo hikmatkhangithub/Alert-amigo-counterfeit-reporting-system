@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { fire, facebookProvider } from "components/Config/Fire";
+import { fire, facebookProvider } from "components/Config/FirebaseAuth";
 //import fire from "components/config/Fire";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-class SignUpForm extends Component {
+
+
+class SignUpForm extends Component {          // Sign Up Form component
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
@@ -18,7 +20,7 @@ class SignUpForm extends Component {
     this.setState({ [e.target.name]: e.target.value });
   }
 
-  signup(e) {
+  signup(e) {                     // Signup Authentication function
     e.preventDefault();
     fire
       .auth()
@@ -37,7 +39,7 @@ class SignUpForm extends Component {
 
   render() {
     return (
-      <div className="col-md-6">
+      <div className="col-md-8">
         <div className="FormTitle1">Sign Up</div>
         <form>
           <div className="form-group">

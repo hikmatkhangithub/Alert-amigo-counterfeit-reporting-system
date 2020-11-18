@@ -43,7 +43,7 @@ class UserProfile extends Component {
       });
   };
 
-  handleInputChange = () => {
+  handleInputChange = () => {                             // Handling input change
     console.log("search value", this.search.value);
     this.setState(
       {

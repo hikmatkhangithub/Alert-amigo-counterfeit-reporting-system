@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Navbar } from "react-bootstrap";
 import { Redirect } from "react-router-dom";
 // import AdminNavbarLinks from "./AdminNavbarLinks.jsx";
-import { fire, facebookProvider } from "components/Config/Fire";
+import { fire, facebookProvider } from "components/Config/FirebaseAuth";
 import { Route } from "react-router-dom";
 
 class Header extends Component {
@@ -36,7 +36,7 @@ class Header extends Component {
       .auth()
       .signOut()
       .then(function() {
-        /*  Route.history.push("/"); */
+     
         console.log("sign out success");
       })
       .catch(function(error) {
@@ -48,10 +48,13 @@ class Header extends Component {
       <Navbar fluid>
         <Navbar.Header>
           <Navbar.Brand>
+           
             <a href="#pablo">{this.props.brandText}</a>
-            <button onClick={this.logout}>Logout</button>
+            
           </Navbar.Brand>
-
+          <div className="logout-button-div">
+            <button className="logout-button-top" onClick={this.logout}>Logout</button>
+            </div>
           <Navbar.Toggle onClick={this.mobileSidebarToggle} />
         </Navbar.Header>
         <Navbar.Collapse>{/* <AdminNavbarLinks /> */}</Navbar.Collapse>

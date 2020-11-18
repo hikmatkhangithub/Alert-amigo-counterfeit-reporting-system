@@ -1,8 +1,8 @@
 {
-  "name": "Alert-Amigo-with-Blockchain",
+  "name": "Alert Amigo Counterfeit Reporting System",
   "version": "1.3.0",
   "private": true,
-  "description": "A Rapid alert System on Ethereum blockchain",
+  "description": "Counterfeit Reporting System on Ethereum blockchain",
   "author": "hikmatkhanse@gmail.com",
   "dependencies": {
     "@blueprintjs/core": "^3.24.0",
@@ -15,6 +15,7 @@
     "babel-preset-stage-3": "6.24.1",
     "babel-register": "6.26.0",
     "bootstrap": "^3.3.7",
+    "browserslist": "^4.14.6",
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
     "chai-bignumber": "3.0.0",

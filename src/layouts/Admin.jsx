@@ -2,27 +2,22 @@ import React, { Component } from "react";
 import NotificationSystem from "react-notification-system";
 
 import AdminNavbar from "components/Navbars/AdminNavbar";
-// import Footer from "components/Footer/Footer";
-import Sidebar from "components/Sidebar/Sidebar";
 import "./Admin.css";
-import sideimage from "./sideimage.jpg";
+import { fire, facebookProvider } from "components/Config/FirebaseAuth";
+import Sidebar from "components/Sidebar/Sidebar";
+import sideimage from "./mainPageLogo.jpg";
 import SignInForm from "components/SignInForm/SignInForm.jsx";
 import SignUpForm from "components/SignUpForm/SignUpForm.jsx";
-import { fire, facebookProvider } from "components/Config/Fire";
+import { style } from "variables/Variables.jsx";
+import routes from "routes.js";
 import {
   HashRouter as Router,
   Switch,
   Route,
   Link,
   NavLink,
-  Redirect,
 } from "react-router-dom";
-import Dashboard from "views/Dashboard.jsx";
 
-import { style } from "variables/Variables.jsx";
-import Navbar from "components/Navbar";
-import routes from "routes.js";
-import Notifications from "views/Notifications.jsx";
 
 class Admin extends Component {
   constructor() {
@@ -161,7 +156,7 @@ class Admin extends Component {
       this.refs.mainPanel.scrollTop = 0;
     }
   }
-  authListener() {
+  authListener() {                                    // Authentication listener function
     fire.auth().onAuthStateChanged((user) => {
       console.log(user);
 
@@ -179,7 +174,7 @@ class Admin extends Component {
     this.setState({ [e.target.name]: e.target.value });
   }
 
-  login(e) {
+  login(e) {                                    // Login function for user
     e.preventDefault();
     fire
       .auth()
@@ -191,7 +186,7 @@ class Admin extends Component {
       });
   }
 
-  signup(e) {
+  signup(e) {                                   // Sign up function for user
     e.preventDefault();
   }
   render() {
@@ -220,7 +215,7 @@ class Admin extends Component {
                 <div className="backside-image">
                   <img
                     src={sideimage}
-                    style={{ width: "560px", height: "721px" }}
+                    style={{ width: "560px", height: "auto" }}
                   />
                 </div>
               </div>

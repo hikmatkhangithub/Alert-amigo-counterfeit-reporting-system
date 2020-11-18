@@ -1,14 +1,8 @@
 import React, { Component } from "react";
 import "./Typography.css";
-import search from "./images/search.png";
-import report from "./images/report.png";
-import alertsbell from "./images/alertsbell.png";
-import { fire, facebookProvider } from "components/Config/Fire";
-import Typography from "views/Typography.jsx";
-import { Redirect } from "react-router-dom";
-import one from "./one.png";
-import note from "./note.png";
-import rep from "./rep.png";
+import one from "./viewImages/one.png";
+import note from "./viewImages/note.png";
+import rep from "./viewImages/rep.png";
 class Notifications extends Component {
   constructor(props) {
     super(props);

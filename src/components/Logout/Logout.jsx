@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { fire, facebookProvider } from "components/Config/Fire";
+import { fire, facebookProvider } from "components/Config/FirebaseAuth";
 //import fire from "components/config/Fire";
 import Home from "views/Home.jsx";
 import { Modal, Button } from "react-bootstrap";

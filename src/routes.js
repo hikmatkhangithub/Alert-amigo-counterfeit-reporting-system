@@ -1,17 +1,12 @@
-import Dashboard from "views/Dashboard.jsx";
+import AdminLogin from "views/AdminLogin";
 import UserProfile from "views/UserProfile.jsx";
 import Typography from "views/Typography.jsx";
 import Icons from "views/Icons.jsx";
 import Maps from "views/Maps.jsx";
 import Notifications from "views/Notifications.jsx";
-
-import AdminLogin from "views/AdminLogin";
-
-import Upgrade from "views/Upgrade.jsx";
-import SignUpForm from "components/SignUpForm/SignUpForm.jsx";
 import Logout from "components/Logout/Logout.jsx";
 
-const dashboardRoutes = [
+const dashboardRoutes = [       // sidebar Routes
   {
     path: "/notifications",
     name: "Getting Started",
@@ -19,15 +14,6 @@ const dashboardRoutes = [
     component: Notifications,
     layout: "/admin",
   },
-
-  // {
-  //   path: "/signup",
-  //   name: "SignUp Form",
-  //   icon: "pe-7s-user",
-  //   component: SignUpForm,
-  //   layout: "/admin"
-  // },
-
   {
     path: "/user",
     name: "Search",
@@ -42,14 +28,6 @@ const dashboardRoutes = [
     component: Typography,
     layout: "/admin",
   },
-  // {
-  //   path: "/table",
-  //   name: "Table List",
-  //   icon: "pe-7s-note2",
-  //   component: TableList,
-  //   layout: "/admin"
-  // },
-
   {
     path: "/icons",
     name: "Status",

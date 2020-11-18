@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { fire, facebookProvider } from "components/Config/Fire";
+import { fire, facebookProvider } from "components/Config/FirebaseAuth";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import SignUpForm from "components/SignUpForm/SignUpForm.jsx";
 import { Toaster, Intent } from "@blueprintjs/core";
@@ -56,7 +56,7 @@ class SignInForm extends Component {
 
   render() {
     return (
-      <div className="col-md-6">
+      <div className="col-md-8">
         <Toaster
           ref={element => {
             this.toaster = element;

@@ -33,7 +33,7 @@ class Main extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  //---------------------on change of file-------------------
+  //  on file change
   handleChange(event) {
     this.setState({ countryOfOrigin: event.target.value });
     console.log(this.state.countryOfOrigin);
@@ -46,8 +46,8 @@ class Main extends Component {
     this.setState({ alertSubmittedBy: event.target.value });
     console.log(this.state.alertSubmittedBy);
   }
-  //-------------------------------------------------------
-  onChangeHandlerPost = event => {
+  
+  onChangeHandlerPost = event => {                      // On change handler
     this.setState({
       productImage: event.target.files[0]
     });
@@ -61,8 +61,8 @@ class Main extends Component {
       showMessage: true
     });
   };
-  //----------------------------handle Submit----------------
-  handleSubmit = event => {
+ 
+  handleSubmit = event => {                              // on handle submit
     event.preventDefault();
     const form = new FormData();
     form.append("productName", this.productName.value);
@@ -83,18 +83,11 @@ class Main extends Component {
     this.setState({ showMessage: true });
 
     console.log("Clicked");
-    //---------------------------------------------------
-    /* const pname = this.productName.value;
-    const price = this.productPrice.value;
-    const pCategory = this.productCategory.value;
-    const pBrand = this.productBrand.value;
-    const pCountryOfOrigin = this.state.countryOfOrigin;
-
-    this.props.createProduct(pname, price, pCategory, pBrand, pCountryOfOrigin); */
+   
   };
   render() {
     return (
-      // <div id="content">
+     
       <div className="container1">
         <h2 className="abc">Submit Report</h2>
         <hr className="new1" />
@@ -278,7 +271,7 @@ class Main extends Component {
           )}
         </div>
       </div>
-      // </div>
+    
     );
   }
 }

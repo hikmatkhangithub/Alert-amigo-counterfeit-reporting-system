@@ -5,15 +5,14 @@ import "./assets/css/animate.min.css";
 import "./assets/sass/light-bootstrap-dashboard-react.scss?v=1.3.0";
 import "./assets/css/demo.css";
 import "./assets/css/pe-icon-7-stroke.css";
-import "./Abc.css";
+import "./assets/css/CustomAdminStyle.css";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import AdminLayout from "layouts/Admin.jsx";
-import Notfound from "./components/notfound";
+import Notfound from "./components/Notfound";
 import * as serviceWorker from "./serviceWorker";
 
-let state = {};
 
-const Routing = (
+const Routing = (       // Routing
   <BrowserRouter>
     <Switch>
       <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
