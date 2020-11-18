@@ -1,6 +1,7 @@
+![alternativetext](public/schreenshot.png)
 # Counterfeit Reporting System Based on Blockchain Technology
 
-![alternativetext](public/schreenshot.png)
+
 
 # Named as "Alert Amigo"
 
