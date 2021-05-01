@@ -1,3 +1,20 @@
+/*!
+
+=========================================================
+* Light Bootstrap Dashboard React - v1.3.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard-react/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
 import React, { Component } from "react";
 import NotificationSystem from "react-notification-system";
 
@@ -27,7 +44,6 @@ class Admin extends Component {
 
       color: "purple",
       //  gradient
-
       fixedClasses: "dropdown show-dropdown open",
       email: "",
       password: "",
@@ -70,6 +86,7 @@ class Admin extends Component {
       autoDismiss: 15,
     });
   };
+  // handle routes for /admin
   getRoutes = (routes) => {
     return routes.map((prop, key) => {
       if (prop.layout === "/admin") {
@@ -156,7 +173,8 @@ class Admin extends Component {
       this.refs.mainPanel.scrollTop = 0;
     }
   }
-  authListener() {                                    // Authentication listener function
+  // authListener() function for handling user authentication
+  authListener() {                                    
     fire.auth().onAuthStateChanged((user) => {
       console.log(user);
 
@@ -173,8 +191,8 @@ class Admin extends Component {
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
-
-  login(e) {                                    // Login function for user
+// Login function for admin authentication using email & password
+  login(e) {                                    
     e.preventDefault();
     fire
       .auth()
@@ -185,8 +203,8 @@ class Admin extends Component {
         console.log(error);
       });
   }
-
-  signup(e) {                                   // Sign up function for user
+// Sign up function for creating an Admin with specific email address
+  signup(e) {                                   
     e.preventDefault();
   }
   render() {
@@ -214,8 +232,9 @@ class Admin extends Component {
               <div className="App__Aside">
                 <div className="backside-image">
                   <img
+                    className='leftside-image'
                     src={sideimage}
-                    style={{ width: "560px", height: "auto" }}
+                    
                   />
                 </div>
               </div>

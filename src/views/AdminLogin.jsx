@@ -26,7 +26,7 @@ class AdminLogin extends Component {
         this.setState({ user });
         localStorage.setItem("user", user.uid);
         localStorage.setItem("user", user.refreshToken);
-        // --------admin condition--------------
+        // Admin authentication condition
         if (user.uid === "BMztOE7tjuUIkFN51WINxlqMaT82") {
           this.setState({ isAdmin: true });
           alert("This is admin account " + this.state.isAdmin);
@@ -43,7 +43,7 @@ class AdminLogin extends Component {
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
-
+// login function for admin only
   login(e) {
     e.preventDefault();
     fire
@@ -55,6 +55,7 @@ class AdminLogin extends Component {
         console.log(error);
       });
   }
+  // render() function to show data for admin only
   render() {
     return (
       <div className="container">

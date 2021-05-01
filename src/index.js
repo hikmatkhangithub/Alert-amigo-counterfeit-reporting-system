@@ -8,11 +8,11 @@ import "./assets/css/pe-icon-7-stroke.css";
 import "./assets/css/CustomAdminStyle.css";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import AdminLayout from "layouts/Admin.jsx";
-import Notfound from "./components/Notfound";
+import Notfound from "./components/notfound";
 import * as serviceWorker from "./serviceWorker";
 
-
-const Routing = (       // Routing
+// routes for different user interface
+const Routing = (     
   <BrowserRouter>
     <Switch>
       <Route path="/admin" render={(props) => <AdminLayout {...props} />} />

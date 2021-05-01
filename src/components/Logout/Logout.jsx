@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { fire, facebookProvider } from "components/Config/FirebaseAuth";
-//import fire from "components/config/Fire";
 import Home from "views/Home.jsx";
 import { Modal, Button } from "react-bootstrap";
 import { Route } from "react-router-dom";
@@ -11,6 +10,7 @@ class Logout extends Component {
     this.logout = this.logout.bind(this);
   }
 
+  // function to Logout user from alert amigo counterfeit system
   logout() {
     fire
       .auth()

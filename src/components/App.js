@@ -10,6 +10,7 @@ class App extends Component {
     await this.loadBlockchainData();
   }
 
+// function to connect alert-amigo app to ethereum blockchain network
   async loadWeb3() {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum);
@@ -24,10 +25,10 @@ class App extends Component {
       );
     }
   }
-
+// Async function to load blockchain data stored on ethereum network
   async loadBlockchainData() {
     const web3 = new Web3(window.web3);
-    // Load account
+// Load account
     const accounts = await web3.eth.getAccounts();
     this.setState({ account: accounts[0] });
     const networkId = await web3.eth.net.getId();
@@ -38,23 +39,20 @@ class App extends Component {
         networkData.address
       );
       this.setState({ marketplace });
+// Count products
       const productCount = await marketplace.methods.productCount().call();
-      //console.log(productCount.toString())
       this.setState({ productCount });
-      // Load products
+// Load products
       for (var i = 1; i <= productCount; i++) {
         const product = await marketplace.methods.products(i).call();
-        // const product1 = await marketplace.methods.productss(i).call()
 
         this.setState({
           products: [...this.state.products, product]
-          //  productss: [...this.state.productss, product1]
         });
+//checking products in console
         console.log(product);
-        // console.log(product1)
       }
-      //---------------------------------added code-----------------------------
-      //---------------------------------added code end-------------------------
+      
       this.setState({ loading: false });
     } else {
       window.alert("Marketplace contract not deployed to detected network.");
@@ -70,20 +68,9 @@ class App extends Component {
       productss: [],
       loading: true
     };
-
-    // this.createProduct = this.createProduct.bind(this);
   }
 
-  /* createProduct(pname, price, pCategory, pBrand, pCountryOfOrigin) {
-    this.setState({ loading: true });
-    this.state.marketplace.methods
-      .createProduct(pname, price, pCategory, pBrand, pCountryOfOrigin)
-      .send({ from: this.state.account })
-      .once("receipt", receipt => {
-        this.setState({ loading: false });
-      });
-  }
- */
+ // render() function to show all products stored on ethereum ropsten network
   render() {
     return (
       <div>

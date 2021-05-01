@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { fire, facebookProvider } from "components/Config/FirebaseAuth";
-//import fire from "components/config/Fire";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
-
-class SignUpForm extends Component {          // Sign Up Form component
+// Sign Up Form component
+class SignUpForm extends Component {          
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
@@ -20,7 +19,8 @@ class SignUpForm extends Component {          // Sign Up Form component
     this.setState({ [e.target.name]: e.target.value });
   }
 
-  signup(e) {                     // Signup Authentication function
+// Firebase signup() authentication function
+  signup(e) {                     
     e.preventDefault();
     fire
       .auth()
@@ -36,7 +36,7 @@ class SignUpForm extends Component {          // Sign Up Form component
         alert(error);
       });
   }
-
+// render() function for signup form
   render() {
     return (
       <div className="col-md-8">

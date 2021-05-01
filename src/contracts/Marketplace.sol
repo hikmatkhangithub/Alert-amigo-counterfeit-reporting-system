@@ -4,11 +4,6 @@ contract Marketplace {
     string public name;
     uint256 public productCount = 0;
     mapping(uint256 => Product) public products;
-<<<<<<< HEAD
-  
-    
-=======
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
 
     struct Product {
         uint256 id;
@@ -22,10 +17,6 @@ contract Marketplace {
         bool purchased;
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f2024770a70793b5f5ec64ded646958124ec9164
     event ProductCreated(
         uint256 id,
         string pname,

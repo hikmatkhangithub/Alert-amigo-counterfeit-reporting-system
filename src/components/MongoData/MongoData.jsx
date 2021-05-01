@@ -11,6 +11,7 @@ class MongoData extends Component {
     };
   }
 
+  // Using effect hooks to load all data from out alert-amigo rest api
   componentDidMount() {
     fetch("https://alert-amigo-api.herokuapp.com/products")
       .then(res => res.json())
@@ -33,6 +34,7 @@ class MongoData extends Component {
       );
     console.log(this.state.products[0]);
   }
+  // Render function to Load all data from alert-amigo or show an error message
   render() {
     const { error, isLoaded, products } = this.state;
     if (error) {

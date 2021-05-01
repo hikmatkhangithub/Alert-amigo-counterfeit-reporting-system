@@ -47,7 +47,6 @@ class AdminDashboard extends Component {
     }
   }
 
-  /* ----------------------Above code is newly added---------------------------------- */
   constructor(props) {
     super(props);
     this.state = {
@@ -94,6 +93,7 @@ class AdminDashboard extends Component {
     this.refreshList();
   }
 
+// function to create a product entry on ethereum ropsten network | only admin can send data to blockchain
   createProduct = (pname, price, pCategory, pBrand, pCountryOfOrigin) => {
     this.setState({ loading: true });
     this.state.marketplace.methods
@@ -103,15 +103,13 @@ class AdminDashboard extends Component {
         this.setState({ loading: false });
       });
   };
-
+// function to handle the submited data request
   handleSubmit = (event, data) => {
     const pname = data.productName;
     const price = data.productPrice;
     const pCategory = data.productCategory;
     const pBrand = data.productBrand;
     const pCountryOfOrigin = data.countryOfOrigin;
-
-    /*  console.log("e", event.target.value); */
 
     this.createProduct(pname, price, pCategory, pBrand, pCountryOfOrigin);
 
@@ -120,7 +118,7 @@ class AdminDashboard extends Component {
     console.log("Is clicked", this.state.isClicked);
     console.log("Is clicked for value", this.state.valueSet);
   };
-
+// function to handle the delete data request
   handleDelete = id => {
     if (window.confirm("Are you sure")) {
       fetch("https://alert-amigo-api.herokuapp.com/products/" + id, {
@@ -132,12 +130,13 @@ class AdminDashboard extends Component {
       });
     }
   };
-
+// logout function for admin
   logout(e) {
     e.preventDefault();
 
     fire.auth().signOut();
   }
+  // render() function to show all products with CRUD operationss to Admin only
   render() {
     const { error, isLoaded, products } = this.state;
     if (error) {

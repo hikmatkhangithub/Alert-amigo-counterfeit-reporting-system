@@ -30,6 +30,7 @@ class AdminNavbarLinks extends Component {
     );
     return (
       <div>
+        {/* applied custom navbar design dont need this peice of code */}
         <Nav>
          {/*  <NavItem eventKey={1} href="#">
             <i className="fa fa-dashboard" />

@@ -5,7 +5,7 @@ import "views/Typography.css";
 class Main extends Component {
   constructor(props) {
     super(props);
-
+// Initial state of form data
     this.state = {
       productName: "",
       productPrice: "",
@@ -26,6 +26,7 @@ class Main extends Component {
       pBrand: "",
       pCountryOfOrigin: ""
     };
+// binding all the form data into hanleChange functions
     this.handleChange = this.handleChange.bind(this);
     this.handleChange1 = this.handleChange1.bind(this);
     this.handleChange2 = this.handleChange2.bind(this);
@@ -33,27 +34,29 @@ class Main extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  //  on file change
+// handle all changes to form data
   handleChange(event) {
     this.setState({ countryOfOrigin: event.target.value });
     console.log(this.state.countryOfOrigin);
   }
+// handle all changes to form data
   handleChange1(event) {
     this.setState({ riskType: event.target.value });
     console.log(this.state.riskType);
   }
+// handle all changes to form data
   handleChange2(event) {
     this.setState({ alertSubmittedBy: event.target.value });
     console.log(this.state.alertSubmittedBy);
   }
-  
-  onChangeHandlerPost = event => {                      // On change handler
+// handle all changes when a POST request with new data is send to form
+  onChangeHandlerPost = event => {                      
     this.setState({
       productImage: event.target.files[0]
     });
     console.log(event.target.files[0]);
   };
-
+// click handler for checking
   onClickHandler = event => {
     console.log("Clicked");
 
@@ -61,8 +64,8 @@ class Main extends Component {
       showMessage: true
     });
   };
- 
-  handleSubmit = event => {                              // on handle submit
+// function to handle submit on product form
+  handleSubmit = event => {                             
     event.preventDefault();
     const form = new FormData();
     form.append("productName", this.productName.value);
@@ -81,10 +84,11 @@ class Main extends Component {
     });
 
     this.setState({ showMessage: true });
-
+// checking clicked form button on console
     console.log("Clicked");
    
   };
+// render() function for submit report form
   render() {
     return (
      

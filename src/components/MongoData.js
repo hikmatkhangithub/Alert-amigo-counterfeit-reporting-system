@@ -13,6 +13,7 @@ constructor(props) {
     };
   }
 
+  // using effect hooks to fetch all data from alert-amigo rest api 
   componentDidMount() {
     fetch("https://alert-amigo-api.herokuapp.com/products")
       .then(res => res.json())
@@ -36,7 +37,7 @@ constructor(props) {
 
       console.log(this.state.products[0]);
   }
-
+// render() function for data stored on mongodb data
   render() {
     const { error, isLoaded, products } = this.state;
     if (error) {

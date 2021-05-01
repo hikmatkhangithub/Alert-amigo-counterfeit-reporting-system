@@ -1,5 +1,6 @@
 import firebase from "firebase";
 
+// Configuration for connecting firebase api to alert amigo
 const config = {
   apiKey: "AIzaSyBMk20ZH_PtKUeirgu8rCQz4s7dB4XGwUg",
   authDomain: "alert-amigo.firebaseapp.com",

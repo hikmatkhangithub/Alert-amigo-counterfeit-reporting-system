@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+/* import React, { Component } from "react";
 
 import SignInForm from "components/SignInForm/SignInForm.jsx";
 import SignUpForm from "components/SignUpForm/SignUpForm.jsx";
@@ -28,7 +28,7 @@ class Dashboard extends Component {
   componentDidMount() {
     this.authListener();
   }
-
+// authlistener for admin authentication
   authListener() {
     fire.auth().onAuthStateChanged(user => {
       console.log(user);
@@ -37,10 +37,9 @@ class Dashboard extends Component {
         this.setState({ user });
         localStorage.setItem("user", user.uid);
 
-        // --------admin condition--------------
+        // Admin authentication condition
         if (user.uid === "BMztOE7tjuUIkFN51WINxlqMaT82") {
           this.setState({ isAdmin: true });
-          /*   alert("This is admin account " + this.state.isAdmin); */
         } else {
           this.setState({ isAdmin: false });
         }
@@ -84,7 +83,7 @@ class Dashboard extends Component {
                     src={sideimage}
                     style={{ width: "560px", height: "721px" }}
                   /> */}
-                </div>
+       /*         </div>
               </div>
               <div className="App__Form">
                 <div className="PageSwitcher">
@@ -136,3 +135,4 @@ class Dashboard extends Component {
 }
 
 export default Dashboard;
+ */

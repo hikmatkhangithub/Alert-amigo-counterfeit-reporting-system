@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch, Redirect, Link } from "react-router-dom";
 import Logo from "views/viewImages/tick.png";
 
 class Blockchain extends Component {
+  // render() function to show all the stored data on ethereum ropsten network
   render() {
     return (
       <div id="content">

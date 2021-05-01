@@ -20,10 +20,11 @@ class SignInForm extends Component {
       password: ""
     };
   }
-
+// function to handle changes and set the state
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
+// Firebase api function to authorise user using facebook account
   authWithFacebook() {
     console.log("authed with facebook");
     fire
@@ -40,13 +41,13 @@ class SignInForm extends Component {
         }
       });
   }
+   // function to Login user to  alert amigo counterfeit system
   login(e) {
     e.preventDefault();
     fire
       .auth()
       .signInWithEmailAndPassword(this.state.email, this.state.password)
       .then(u => {
-      /*   history.push("/admin/notifications"); */
       })
       .catch(error => {
         console.log(error);
